@@ -1,4 +1,3 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import React from 'react'
 import styled from "styled-components"
 
@@ -10,25 +9,27 @@ const Conatiner = styled.div`
     background-color: white;
 `;
 
-const Arrow = styled.div`
-    width: 50px;
-    height: 50px;
-    background-color: #F9C5FF;
-    border-radius: 50%;
+
+const Wrapper = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 1920px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
 `;
+
+const First = styled.div`
+
+`
+
 
 const Slider = () => {
   return (
     <Conatiner>
-        <Arrow>
-            <ArrowLeftOutlined/>
-        </Arrow>
-        <Arrow>
-            <ArrowRightOutlined/>
-        </Arrow>
+        <Wrapper>
+        
+        </Wrapper>
 
     </Conatiner>
   )
