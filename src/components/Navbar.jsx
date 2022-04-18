@@ -7,7 +7,7 @@ import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
 const Container = styled.div`
     height: 60px;
-    background-color: #EDE4EE;
+    background-color: #fcf1ed;
 `;
 
 const Wrapper = styled.div`
