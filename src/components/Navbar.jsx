@@ -20,6 +20,8 @@ const Wrapper = styled.div`
 
 const Lewo = styled.div`
 felx: 1;
+display: flex;
+align-items: center;
 `;
 
 const Logo = styled.h1`
@@ -28,6 +30,7 @@ font-weight: bold;
 
 const Center = styled.div`
 felx: 1;
+text-align: center;
 `;
 
 const Prawo = styled.div`
@@ -44,11 +47,14 @@ cursor: pointer;
 margin-left: 20px;
 `
 
+
+
 const Navbar = () => {
   return (
     <Container>
         <Wrapper>
-            <Lewo>Lewo</Lewo>
+            <Lewo>
+            </Lewo>
             <Center><Logo>BB Nails</Logo></Center>
             <Prawo>
               <Menu>Rejestracja</Menu>
