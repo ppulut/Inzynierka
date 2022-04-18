@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Phone, Room, MailOutline } from '@mui/icons-material'
+import { Facebook, Instagram, Twitter, Phone, MailOutline } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -73,9 +73,6 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-const Payment = styled.img`
-    width: 50%;
-`;
 
 const Footer = () => {
   return (

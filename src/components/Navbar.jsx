@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Badge from '@mui/material/Badge';
 import LoginIcon from '@mui/icons-material/Login';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import {Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -49,7 +50,11 @@ margin-left: 20px;
 
 
 
+
+
 const Navbar = () => {
+
+
   return (
     <Container>
         <Wrapper>
@@ -57,9 +62,14 @@ const Navbar = () => {
             </Lewo>
             <Center><Logo>BB Nails</Logo></Center>
             <Prawo>
-              <Menu>Rejestracja</Menu>
+               <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
+                 <Menu>Rejestracja</Menu>
+                </Link>
+        
               <AccessibilityNewIcon color="action" />
-              <Menu>Zaloguj</Menu>
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+              <Menu>Logowanie</Menu>
+                  </Link>
               <Badge color="primary">
       <LoginIcon color="action" />
               </Badge>
