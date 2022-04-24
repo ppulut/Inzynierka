@@ -10,8 +10,37 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getRepeatpassword() {
+        return repeatpassword;
+    }
+
+    public void setRepeatpassword(String repeatpassword) {
+        this.repeatpassword = repeatpassword;
+    }
+
+    private String surname;
     private String login;
     private String password;
+    private String repeatpassword;
 
     public Users() {
     }
