@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const Container = styled.div`
@@ -55,17 +55,54 @@ cursor: pointer;
 `
 
 const Register = () => {
+
+  const[name,setName]=useState('')
+  const[surname,setSurname]=useState('')
+  const[login,setLogin]=useState('')
+  const[password,setPassword]=useState('')
+  const[rePassword,setRePassword]=useState('')
+
+  const handleClick=(e)=>{
+    e.preventDefault()
+    const user={name,surname,login,password,rePassword}
+    console.log(user)
+
+ fetch("http://localhost:8080/users/add",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(user)
+
+  }).then(()=>{
+    console.log("New Student added")
+  })
+}
+
   return (
   <Container>
       <Wrapper>
           <Title>UTWÓRZ KOTNO</Title>
           <Form>
-              <Input placeholder="Imię"/>
-              <Input placeholder="Nazwisko"/>
-              <Input placeholder="Login"/>
-              <Input placeholder="Hasło"/>
-              <Input placeholder="Potwierdź hasło"/>
-            <Button>Utwórz</Button>
+              <Input placeholder="Imię"
+                            value={name}
+                            onChange={(e)=>setName(e.target.value)}
+              />
+              <Input placeholder="Nazwisko"
+                            value={surname}
+                            onChange={(e)=>setSurname(e.target.value)}
+              />
+              <Input placeholder="Login"
+                            value={login}
+                            onChange={(e)=>setLogin(e.target.value)}
+              />
+              <Input placeholder="Hasło"
+                            value={password}
+                            onChange={(e)=>setPassword(e.target.value)}
+              />
+              <Input placeholder="Potwierdź hasło"
+                            value={rePassword}
+                            onChange={(e)=>setRePassword(e.target.value)}
+              />
+            <Button onClick={handleClick}>Utwórz</Button>
           </Form>
       </Wrapper>
 

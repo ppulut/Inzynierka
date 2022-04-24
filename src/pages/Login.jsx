@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const Container = styled.div`
@@ -64,13 +64,21 @@ margin: 5px 0px;
 
 
 const Login = () => {
+  const[login,setLogin]=useState('')
+  const[password,setPassword]=useState('')
   return (
     <Container>
     <Wrapper>
         <Title>ZALOGUJ SIĘ</Title>
         <Form>
-            <Input placeholder="Login"/>
-            <Input placeholder="Hasło"/>
+            <Input placeholder="Login"
+            value={login}
+            onChange={(e)=>setLogin(e.target.value)}
+            />
+            <Input placeholder="Hasło"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
+            />
           <Button>ZALOGUJ</Button>
           <Link>NIE PAMIĘTASZ HASŁA?</Link>
           <Link>UTWÓRZ NOWE KONTO</Link>

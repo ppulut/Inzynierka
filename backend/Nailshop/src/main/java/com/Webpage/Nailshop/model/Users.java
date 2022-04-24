@@ -12,6 +12,18 @@ public class Users {
     private int id;
 
     private String name;
+    private String surname;
+    private String login;
+    private String password;
+    private String rePassword;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -29,30 +41,6 @@ public class Users {
         this.surname = surname;
     }
 
-    public String getRepeatpassword() {
-        return repeatpassword;
-    }
-
-    public void setRepeatpassword(String repeatpassword) {
-        this.repeatpassword = repeatpassword;
-    }
-
-    private String surname;
-    private String login;
-    private String password;
-    private String repeatpassword;
-
-    public Users() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getLogin() {
         return login;
     }
@@ -67,5 +55,13 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
     }
 }
