@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import React, { useState } from 'react'
+import {Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -54,7 +55,7 @@ color: white;
 cursor: pointer;
 `
 
-const Link = styled.a`
+const Menu = styled.a`
 margin: 5px 0px;
   font-size: 12px;
   text-decoration: underline;
@@ -80,8 +81,13 @@ const Login = () => {
             onChange={(e)=>setPassword(e.target.value)}
             />
           <Button>ZALOGUJ</Button>
-          <Link>NIE PAMIĘTASZ HASŁA?</Link>
-          <Link>UTWÓRZ NOWE KONTO</Link>
+
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+              <Menu>NIE PAMIĘTASZ HASŁA?</Menu>
+                  </Link>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
+              <Menu>UTWÓRZ NOWE KONTO</Menu>
+                  </Link>
         </Form>
     </Wrapper>
 

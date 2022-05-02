@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
+import {Link } from "react-router-dom";
+
 
 const Container = styled.div`
 flex: 1;
@@ -45,16 +47,26 @@ border-radius: 4%;
 `
 
 
+
+
 const CategoryItem = ({item}) => {
   return (
     <Container>
+      
       <Image src={item.img}/>
         <Info>
             <Tytul>{item.title}</Tytul>
+            
+            <Link
+             to={"/ProductsPage"}>
             <Button>PRZEJDŹ</Button>
-        </Info>
-
+                  </Link>          
+            
+            </Info>
     </Container>
+
+
+
   )
 }
 
