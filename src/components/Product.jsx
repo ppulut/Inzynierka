@@ -1,11 +1,11 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
+import {ShoppingCartOutlined } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
 
   const Info = styled.div`
   opacity: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,35 +26,28 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
+
   position: relative;
   &:hover ${Info}{
     opacity: 1;
   }
 `;
 
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
 
 const Image = styled.img`
-  height: 75%;
+  height: 60%;
   z-index: 2;
 `;
 
 const Icon = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 150px;
+  height: 50px;
+  border-radius: 20%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 20px;
   transition: all 0.5s ease;
   &:hover {
     background-color: #e9f5f5;
@@ -62,20 +55,56 @@ const Icon = styled.div`
   }
 `;
 
+const NamePrice = styled.div`
+margin: 4px 12px 8px;
+position: absolute;
+bottom:0;
+width: 100%;
+height: 20%;
+display: flex;
+
+margin-top: 3px;
+
+`
+
+
+const Name = styled.h2`
+display: flex;
+width: 100%;
+height: 10%;
+position: absolute;
+padding:10px;
+background-color: white;
+
+`
+
+const Price = styled.h2`
+display: flex;
+width: 100%;
+height: 10%;
+position: absolute;
+bottom:0;
+font-size: 18px;
+line-height: 20px;
+color: rgb(26, 26, 26);
+font-weight: normal;
+text-decoration: none;
+margin: 4px 12px 8px
+`
+
+
+
 const Product = ({item}) => {
   return (
     <Container>
-      <Circle/>
       <Image src={item.img}/>
+      <NamePrice>
+      <Name>{item.title}</Name>
+      <Price>{item.price}</Price>
+      </NamePrice>
       <Info>
         <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
+         DODAJ <ShoppingCartOutlined />
         </Icon>
       </Info>
     </Container>

@@ -7,7 +7,7 @@ import {Link } from "react-router-dom";
 
 
 const Container = styled.div`
-    height: 60px;
+    height: 80px;
     background-color: #fcf1ed;
 `;
 
@@ -60,7 +60,7 @@ const Navbar = () => {
         <Wrapper>
             <Lewo>
             </Lewo>
-            <Center><Logo>BB Nails</Logo></Center>
+            <Center><Logo>Carolinails</Logo></Center>
             <Prawo>
                <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
                  <Menu>Rejestracja</Menu>

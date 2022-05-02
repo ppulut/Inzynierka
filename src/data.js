@@ -3,7 +3,7 @@ export const sliderItems = [
       id: 1,
       img: "https://i.pinimg.com/736x/77/ec/43/77ec43bc90a76192f283466803cd830a.jpg",
       title: "WITAJ",
-      opis: "Pierwsz wizyta -10%",
+      opis: "Skorzystaj z rabatu -10% na pierwszą wizytę",
       bg: "white",
     },
     {
@@ -29,14 +29,14 @@ export const sliderItems = [
       title: "CENNIK",
     },
     {
-      link: "",
+      link: "Product",
       img: "https://media.istockphoto.com/photos/hardware-removal-of-the-old-shellac-from-the-nails-in-the-salon-by-picture-id1184545294?k=20&m=1184545294&s=612x612&w=0&h=KvbshnuX6jjTT8h5rSMTqeyzTTSe6vg8H5ZvZBZi-cY=",
       title: "OPIS USŁUG",
     },
     {
       link: "ProductsPage",
       img: "https://media.istockphoto.com/photos/young-beautiful-asian-woman-using-smart-phone-and-credit-card-for-picture-id1035462566?k=20&m=1035462566&s=612x612&w=0&h=zMmTLkh9N2Y52sEUPC25QwNytydwXuDyl64XnfmpKdg=",
-      title: "SKLEP",
+      title: "OFERTA",
     },
     {
       link: "",
@@ -50,18 +50,27 @@ export const sliderItems = [
   export const popularProducts = [
     {
       id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img:"https://claresa.pl/userdata/public/gfx/2788/sparkle-3%2C-lakier-hybrydowy-z-brokatem.jpg",
+      title:"Lakier hybrydowy",
+      price:"80 zł",
     },
     {
       id:2,
-      img:"https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+      img:"https://static.wizaz.pl/media/cache/500x500/kwc/product/188/102/102188/337123.jpeg",
+      title:"Lakier żelowy",
+      price:"100 zł",
     },
     {
       id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+      img:"https://www.new-nails.com/wp-content/uploads/2017/01/kurs-zdobienia-paznokci-barok.jpg",
+      title:"Zdobienia",
+      price:"1-5 zł",
     },
     {
       id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+      img:"https://s2.zeberka.pl/wp-content/uploads/sites/3/2019/04/domowy-peeling-dloni-R1.jpg",
+      title:"Peeling dłoni",
+      price:"20 zł",
     },
+
   ]

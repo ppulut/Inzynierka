@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Twitter, Phone, MailOutline } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import {Link } from "react-router-dom";
 
 const Container = styled.div`
 display: flex;
@@ -57,7 +58,7 @@ const Title = styled.h3`
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: circle
   display: flex;
   flex-wrap: wrap;
 `;
@@ -96,12 +97,20 @@ const Footer = () => {
        <Center>
        <Title>Przydatne linki</Title>
         <List>
-          <ListItem>Strona główna</ListItem>
-          <ListItem>Cennik</ListItem>
-          <ListItem>Galeria</ListItem>
-          <ListItem>FAQs</ListItem>
-          <ListItem>Usługi</ListItem>
-          <ListItem>Kontakt</ListItem>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <ListItem>Cennik</ListItem></Link>
+
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <ListItem>Galeria</ListItem></Link>
+
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <ListItem>FAQs</ListItem></Link>
+
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <ListItem>Usługi</ListItem></Link>
+
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <ListItem>Kontakt</ListItem></Link>
         </List>
        </Center>
 
