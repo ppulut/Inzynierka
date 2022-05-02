@@ -58,7 +58,7 @@ const CategoryItem = ({item}) => {
             <Tytul>{item.title}</Tytul>
             
             <Link
-             to={"/ProductsPage"}>
+             to={`/${item.link}`}>
             <Button>PRZEJDŹ</Button>
                   </Link>          
             

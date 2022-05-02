@@ -24,22 +24,22 @@ export const sliderItems = [
 
   export const categories = [
     {
-      id: 1,
+      link: "",
       img: "https://media.istockphoto.com/photos/beautiful-woman-with-red-lips-and-manicure-picture-id873929080?k=20&m=873929080&s=612x612&w=0&h=3uxy3CJPXfPaqxnLhMYFMpCLElks88nqZwbH3Am0_RQ=",
       title: "CENNIK",
     },
     {
-      id: 2,
+      link: "",
       img: "https://media.istockphoto.com/photos/hardware-removal-of-the-old-shellac-from-the-nails-in-the-salon-by-picture-id1184545294?k=20&m=1184545294&s=612x612&w=0&h=KvbshnuX6jjTT8h5rSMTqeyzTTSe6vg8H5ZvZBZi-cY=",
       title: "OPIS USŁUG",
     },
     {
-      id: 3,
+      link: "ProductsPage",
       img: "https://media.istockphoto.com/photos/young-beautiful-asian-woman-using-smart-phone-and-credit-card-for-picture-id1035462566?k=20&m=1035462566&s=612x612&w=0&h=zMmTLkh9N2Y52sEUPC25QwNytydwXuDyl64XnfmpKdg=",
       title: "SKLEP",
     },
     {
-        id: 4,
+      link: "",
         img: "https://media.istockphoto.com/photos/girl-with-the-nail-in-hand-on-white-background-picture-id898398096?k=20&m=898398096&s=612x612&w=0&h=oyGe7JZq0tb0Jtyb2TaB3an0Cuxmt399CpC2VZ5tCdE=",
         title: "GALERIA",
       },
