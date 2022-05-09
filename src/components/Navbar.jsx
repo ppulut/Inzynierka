@@ -47,9 +47,20 @@ font-size: 14px;
 cursor: pointer;
 margin-left: 20px;
 `
+const Corner = styled.div`
+felx: 1;
+display: flex;
+align-items: left;
+justify-content: flex-end;
 
+`;
 
+const Image = styled.img`
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
 
+`;
 
 
 const Navbar = () => {
@@ -58,9 +69,12 @@ const Navbar = () => {
   return (
     <Container>
         <Wrapper>
+          <Corner>
+          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          </Corner>
             <Lewo>
             </Lewo>
-            <Center><Logo>Carolinails</Logo></Center>
+            <Center><Logo>Nails</Logo></Center>
             <Prawo>
                <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
                  <Menu>Rejestracja</Menu>
