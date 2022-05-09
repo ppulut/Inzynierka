@@ -71,7 +71,9 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Lewo>
+            <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/"}>
             <Image src="https://i.pinimg.com/736x/83/b2/82/83b2825829edac683f3d8ff3c025e479.jpg" />
+            </Link>
             </Lewo>
             <Center><Logo>Nails</Logo></Center>
             <Prawo>

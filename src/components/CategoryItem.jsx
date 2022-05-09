@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import styled from "styled-components"
 import {Link } from "react-router-dom";
 
@@ -50,6 +50,12 @@ border-radius: 4%;
 
 
 const CategoryItem = ({item}) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
   return (
     <Container>
       
