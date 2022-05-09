@@ -29,7 +29,7 @@ export const sliderItems = [
       title: "CENNIK",
     },
     {
-      link: "Product",
+      link: "",
       img: "https://media.istockphoto.com/photos/hardware-removal-of-the-old-shellac-from-the-nails-in-the-salon-by-picture-id1184545294?k=20&m=1184545294&s=612x612&w=0&h=KvbshnuX6jjTT8h5rSMTqeyzTTSe6vg8H5ZvZBZi-cY=",
       title: "OPIS USŁUG",
     },
@@ -49,7 +49,7 @@ export const sliderItems = [
 
   export const popularProducts = [
     {
-      id:1,
+      id: 1,
       img:"https://claresa.pl/userdata/public/gfx/2788/sparkle-3%2C-lakier-hybrydowy-z-brokatem.jpg",
       title:"Lakier hybrydowy",
       price:"80 zł",
@@ -69,7 +69,7 @@ export const sliderItems = [
     {
       id:4,
       img:"https://s2.zeberka.pl/wp-content/uploads/sites/3/2019/04/domowy-peeling-dloni-R1.jpg",
-      title:"Peeling dłoni",
+      title:"Masaż dłoni",
       price:"20 zł",
     },
 
@@ -100,3 +100,24 @@ export const sliderItems = [
     },
 
   ]
+
+  export const productDetails = [
+    {
+      id: 1,
+      img: "https://i.pinimg.com/736x/77/ec/43/77ec43bc90a76192f283466803cd830a.jpg",
+      title: "Denim Jumpsuit",
+      opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada",
+      price: "45 zł",
+
+    },
+
+    {
+      id: 2,
+      img: "https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg",
+      title: "Denim Jumpsuit",
+      opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada",
+      price: "45 zł",
+
+    },
+    
+  ];

@@ -1,6 +1,8 @@
 import {ShoppingCartOutlined } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
+import {Link } from "react-router-dom";
+
 
   const Info = styled.div`
   opacity: 0;
@@ -103,9 +105,11 @@ const Product = ({item}) => {
       <Price>{item.price}</Price>
       </NamePrice>
       <Info>
+      <Link to={`/ProductDet`}>
         <Icon>
          DODAJ <ShoppingCartOutlined />
         </Icon>
+        </Link>     
       </Info>
     </Container>
   )

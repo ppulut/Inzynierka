@@ -1,9 +1,5 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
-
 
 const Container = styled.div``;
 
@@ -70,12 +66,6 @@ const FilterColor = styled.div`
   cursor: pointer;
 `;
 
-const FilterSize = styled.select`
-  margin-left: 10px;
-  padding: 5px;
-`;
-
-const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
   width: 50%;
@@ -113,24 +103,17 @@ const Button = styled.button`
   }
 `;
 
-const Product = () => {
+const ProductDetails = ({item}) => {
   return (
     <Container>
-      <Navbar />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src={item.img}/>
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </Desc>
-          <Price>$ 20</Price>
+          <Title>{item.title}</Title>
+          <Desc>{item.opis}</Desc>
+          <Price>{item.price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
@@ -138,16 +121,7 @@ const Product = () => {
               <FilterColor color="darkblue" />
               <FilterColor color="gray" />
             </Filter>
-            <Filter>
-              <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
-              </FilterSize>
-            </Filter>
+        
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
@@ -159,9 +133,8 @@ const Product = () => {
           </AddContainer>
         </InfoContainer>
       </Wrapper>
-      <Footer />
     </Container>
   );
 };
 
-export default Product;
+export default ProductDetails;

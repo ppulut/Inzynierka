@@ -3,7 +3,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
-import Product from "./pages/Product";
+import ProductDet from "./pages/ProductDet";
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       <Route exact path="/" element={<Home/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/Login" element={<Login/>}/>
-      <Route path="/Product" element={<Product/>}/>
+      <Route path="/ProductDet" element={<ProductDet/>}/>
       <Route path="/ProductsPage" element={<ProductsPage/>}>
       </Route>
       </Routes>
