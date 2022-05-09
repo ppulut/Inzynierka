@@ -71,7 +71,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Lewo>
-            <Image src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/src/logo.jpg?token=GHSAT0AAAAAABTVTFI4AIR4WQKO2KOIXJBMYTZF2VQ" />
+            <Image src="https://i.pinimg.com/736x/83/b2/82/83b2825829edac683f3d8ff3c025e479.jpg" />
             </Lewo>
             <Center><Logo>Nails</Logo></Center>
             <Prawo>

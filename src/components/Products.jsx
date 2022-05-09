@@ -7,6 +7,9 @@ const Container = styled.div`
 display: flex;
 padding: 35px;
 justify-content: space-between;
+display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2);
 `
 
 const Products = () => {

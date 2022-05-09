@@ -73,4 +73,30 @@ export const sliderItems = [
       price:"20 zł",
     },
 
+    {
+      id:5,
+      img:"https://eremcosmetics.pl/userdata/public/gfx/156.jpg",
+      title:"Baza",
+      price:"49 zł",
+    },
+
+    {
+      id:6,
+      img:"https://paatal.pl/data/gfx/pictures/medium/3/4/14243_2.jpg",
+      title:"Akrylożel",
+      price:"39 zł",
+    },
+    {
+      id:7,
+      img:"https://nails.pl/wp-content/uploads/2017/08/formy-510x510.jpeg",
+      title:"Formy do stylizacji",
+      price:"25 zł",
+    },
+    {
+      id:8,
+      img:"https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg",
+      title:"Pędzel do zdobień roz.7",
+      price:"24 zł",
+    },
+
   ]
