@@ -10,7 +10,7 @@ export const sliderItems = [
       id: 2,
       img: "https://d13uy3bdhwkuhk.cloudfront.net/avatar/560429-af60a1ca667f8491fbb19b192a637f1e.jpg",
       title: "KLASYCZNIE",
-      opis: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      opis: "Jeżeli nie chcesz wyróżniać się w tłumie",
       bg: "white",
     },
     {
