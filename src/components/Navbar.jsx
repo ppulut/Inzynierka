@@ -7,8 +7,8 @@ import {Link } from "react-router-dom";
 
 
 const Container = styled.div`
-    height: 80px;
-    background-color: #fcf1ed;
+    height: 90px;
+    background-color: rgb(248,247,243);
 `;
 
 const Wrapper = styled.div`
@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 `;
 
 
@@ -23,16 +24,28 @@ const Lewo = styled.div`
 felx: 1;
 display: flex;
 align-items: center;
+
 `;
 
-const Logo = styled.h1`
-font-weight: bold;
-`
+const Image = styled.img`
+height:80px;
+width:80px;
+`;
+
 
 const Center = styled.div`
 felx: 1;
 text-align: center;
+
 `;
+
+const Logo = styled.h1`
+font-weight: bold;
+felx: 1;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+`
 
 const Prawo = styled.div`
 felx: 1;
@@ -47,20 +60,8 @@ font-size: 14px;
 cursor: pointer;
 margin-left: 20px;
 `
-const Corner = styled.div`
-felx: 1;
-display: flex;
-align-items: left;
-justify-content: flex-end;
 
-`;
 
-const Image = styled.img`
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
-
-`;
 
 
 const Navbar = () => {
@@ -69,10 +70,8 @@ const Navbar = () => {
   return (
     <Container>
         <Wrapper>
-          <Corner>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
-          </Corner>
             <Lewo>
+            <Image src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/src/logo.jpg?token=GHSAT0AAAAAABTVTFI4AIR4WQKO2KOIXJBMYTZF2VQ" />
             </Lewo>
             <Center><Logo>Nails</Logo></Center>
             <Prawo>
