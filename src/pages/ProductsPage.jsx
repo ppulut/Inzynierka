@@ -12,6 +12,8 @@ const ProductsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  
   return (
     <div>
         <Announcement/>

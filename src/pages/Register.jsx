@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import React, { useState } from 'react'
-
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Container = styled.div`
 width: 100vw;
@@ -78,6 +79,8 @@ const Register = () => {
 }
 
   return (
+   <div>
+     <Navbar/> 
   <Container>
       <Wrapper>
           <Title>UTWÓRZ KOTNO</Title>
@@ -107,6 +110,8 @@ const Register = () => {
       </Wrapper>
 
   </Container>
+  <Footer/>
+  </div> 
   )
 }
 

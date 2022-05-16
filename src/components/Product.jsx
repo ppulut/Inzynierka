@@ -105,7 +105,7 @@ const Product = ({item}) => {
       <Price>{item.price}</Price>
       </NamePrice>
       <Info>
-      <Link to={`/ProductDet`}>
+      <Link to={"/"+item.product_id}>
         <Icon>
          DODAJ <ShoppingCartOutlined />
         </Icon>

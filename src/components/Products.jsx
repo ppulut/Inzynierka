@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { popularProducts } from '../data'
 import Product from './Product'
+import {Link } from "react-router-dom";
+import DataServices from '../services/DataServices';
 
 const Container = styled.div`
 display: flex;
@@ -13,15 +15,27 @@ display: grid;
 `
 
 const Products = () => {
-  return (
-    <Container>
-      {popularProducts.map(item=> (
-          <Product item={item} key={item.id} />
 
-        
-      ))}
-    </Container>
-  )
+
+  
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    DataServices.getAllProducts().then((response) => {
+      setProduct(response.data);
+     });
+   }, []);
+
+
+    return (
+        <Container>
+          {product.map((item) => (
+          <Link to={"/"+item.title } state={{ from: item.product_id }}>
+            <Product item={item} key={item.id} />
+          </Link>
+          ))}
+        </Container>
+      );
 }
 
 export default Products
