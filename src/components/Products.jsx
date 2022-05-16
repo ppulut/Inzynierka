@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { popularProducts } from '../data'
+import DataServices from '../services/DataServices'
 import Product from './Product'
-import {Link } from "react-router-dom";
-import DataServices from '../services/DataServices';
 
 const Container = styled.div`
 display: flex;
@@ -15,27 +14,21 @@ display: grid;
 `
 
 const Products = () => {
-
-
-  
-  const [product, setProduct] = useState([]);
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
     DataServices.getAllProducts().then((response) => {
-      setProduct(response.data);
+       setPost(response.data);
      });
    }, []);
-
-
-    return (
-        <Container>
-          {product.map((item) => (
-          <Link to={"/"+item.title } state={{ from: item.product_id }}>
-            <Product item={item} key={item.id} />
-          </Link>
-          ))}
-        </Container>
-      );
+   
+  return (
+    <Container>
+       {post.map((product) => (
+              <Product item={product} key={product.id} />
+        ))}
+    </Container>
+  )
 }
 
 export default Products

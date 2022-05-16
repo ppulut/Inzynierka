@@ -37,5 +37,19 @@ public class NailshopApplication implements CommandLineRunner {
 		products2.setPrice("12");
 		productRepository.save(products2);
 
+		ModProducts products3 = new ModProducts();
+		products3.setImg("https://static.wizaz.pl/media/cache/500x500/kwc/product/188/102/102188/337123.jpeg");
+		products3.setTitle("Żel");
+		products3.setPrice("12");
+		productRepository.save(products3);
+
+		ModProducts products4 = new ModProducts();
+		products4.setImg("https://static.wizaz.pl/media/cache/500x500/kwc/product/188/102/102188/337123.jpeg");
+		products4.setTitle("Żel");
+		products4.setPrice("12");
+		productRepository.save(products4);
+
+		
+
 	}
 }

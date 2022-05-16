@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const URL = "http://localhost:8080/nails";
+const URL = "http://localhost:8080/products";
 
 class DataServices{
 
     getAllProducts(){
-        return axios.get(URL+"/products")
+        return axios.get(URL+"/AllProducts")
     }
     
 
