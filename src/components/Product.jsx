@@ -97,6 +97,7 @@ margin: 4px 12px 8px
 
 
 const Product = ({item}) => {
+  console.log(item.product_id)
   return (
     <Container>
       <Image src={item.img}/>
@@ -105,7 +106,7 @@ const Product = ({item}) => {
       <Price>{item.price}</Price>
       </NamePrice>
       <Info>
-      <Link to={"/ProductDet"+"/"+item.product_id}  state={{ product_details: item}}>
+      <Link to={"/ProductDet/"+item.product_id} state={{product_item:item}}>
         <Icon>
          DODAJ <ShoppingCartOutlined />
         </Icon>

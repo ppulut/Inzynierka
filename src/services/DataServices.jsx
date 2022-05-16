@@ -7,11 +7,6 @@ class DataServices{
     getAllProducts(){
         return axios.get(URL+"/AllProducts/")
     }
-    
-
-    getProductById(id){
-        return axios.get(URL + '/Details/'+id);
-    }
 
 
 }

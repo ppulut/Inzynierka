@@ -21,7 +21,7 @@ const Details = () => {
   return (
     <Container>
        {post.map((details) => (
-              <ProductDetails item={details}/>
+              <ProductDetails item={details} key={details.id}/>
         ))}
     </Container>
   )

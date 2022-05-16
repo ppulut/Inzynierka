@@ -66,5 +66,19 @@ public class NailshopApplication implements CommandLineRunner {
 		details2.setPrice("45 zł");
 		detailsRepository.save(details2);
 
+		ModDetails details3 = new ModDetails();
+		details3.setImg("https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg");
+		details3.setTitle("Denim Jumpsuit");
+		details3.setOpis("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada");
+		details3.setPrice("00 zł");
+		detailsRepository.save(details3);
+
+		ModDetails details4 = new ModDetails();
+		details4.setImg("https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg");
+		details4.setTitle("fghnfgnng");
+		details4.setOpis("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada");
+		details4.setPrice("4123123123 zł");
+		detailsRepository.save(details4);
+
 	}
 }
