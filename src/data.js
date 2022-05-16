@@ -100,24 +100,3 @@ export const sliderItems = [
     },
 
   ]
-
-  export const productDetails = [
-    {
-      id: 1,
-      img: "https://i.pinimg.com/736x/77/ec/43/77ec43bc90a76192f283466803cd830a.jpg",
-      title: "Denim Jumpsuit",
-      opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada",
-      price: "45 zł",
-
-    },
-
-    {
-      id: 2,
-      img: "https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg",
-      title: "Denim Jumpsuit",
-      opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada",
-      price: "45 zł",
-
-    },
-    
-  ];

@@ -22,6 +22,9 @@ public class NailshopApplication implements CommandLineRunner {
 
 	@Autowired
 	public ProductRepository productRepository;
+
+	@Autowired
+	public DetailsRepository detailsRepository;
 	@Override
 	public void run(String... args) throws Exception {
 
@@ -49,7 +52,19 @@ public class NailshopApplication implements CommandLineRunner {
 		products4.setPrice("12");
 		productRepository.save(products4);
 
-		
+		ModDetails details1 = new ModDetails();
+		details1.setImg("https://i.pinimg.com/736x/77/ec/43/77ec43bc90a76192f283466803cd830a.jpg");
+		details1.setTitle("Denim Jumpsuit");
+		details1.setOpis("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada");
+		details1.setPrice("23 zł");
+		detailsRepository.save(details1);
+
+		ModDetails details2 = new ModDetails();
+		details2.setImg("https://nails.pl/wp-content/uploads/2019/06/WhatsApp-Image-2019-06-04-at-15.22.22-510x510.jpeg");
+		details2.setTitle("Denim Jumpsuit");
+		details2.setOpis("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecvenenatis, dolor in finibus malesuada");
+		details2.setPrice("45 zł");
+		detailsRepository.save(details2);
 
 	}
 }
