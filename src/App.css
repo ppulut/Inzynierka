@@ -48,6 +48,7 @@ margin-left: 40px;
     .deco-layer {
         -webkit-transition: "-webkit-transform 0.5s";
         transition: "transform 0.5s";
+        transition: all 200ms ease-out;
         transform: scale(1.05);
     }
     .btn-custom  {
