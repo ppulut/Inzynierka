@@ -44,7 +44,7 @@ const Image = styled.img`
 const Icon = styled.div`
   width: 150px;
   height: 50px;
-  border-radius: 20%;
+  border-radius: 10%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -55,6 +55,13 @@ const Icon = styled.div`
     background-color: #e9f5f5;
     transform: scale(1.1);
   }
+  border:none;
+padding: 10px;
+background-color: white;
+color:gray;
+cursor: pointer;
+font-weight: 600;
+
 `;
 
 const NamePrice = styled.div`
@@ -80,6 +87,12 @@ background-color: white;
 
 `
 
+const Desc = styled.h2`
+display: none;
+
+
+`
+
 const Price = styled.h2`
 display: flex;
 width: 100%;
@@ -95,7 +108,6 @@ margin: 4px 12px 8px
 `
 
 
-
 const Product = ({item}) => {
   console.log(item.product_id)
   return (
@@ -104,9 +116,11 @@ const Product = ({item}) => {
       <NamePrice>
       <Name>{item.title}</Name>
       <Price>{item.price}</Price>
+      <Desc>{item.opis}</Desc>
       </NamePrice>
       <Info>
-      <Link to={"/ProductDet/"+item.product_id} state={{product_item:item}}>
+      <Link style={{ color: 'inherit', textDecoration: 'inherit'}}
+      to={"/ProductDet/"+item.product_id} state={{product_item:item}}>
         <Icon>
          DODAJ <ShoppingCartOutlined />
         </Icon>

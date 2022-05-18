@@ -63,7 +63,7 @@ const CategoryItem = ({item}) => {
         <Info>
             <Tytul>{item.title}</Tytul>
             
-            <Link
+            <Link style={{ color: 'inherit', textDecoration: 'inherit'}}
              to={`/${item.link}`}>
             <Button>PRZEJDŹ</Button>
                   </Link>          

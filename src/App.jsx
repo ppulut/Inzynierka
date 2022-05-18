@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDet from "./pages/ProductDet";
+import PriceList from "./pages/PriceList";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/Login" element={<Login/>}/>
       <Route path="/ProductDet/:id" element={<ProductDet/>}/>
       <Route path="/ProductsPage" element={<ProductsPage/>}/>
+      <Route path="/PriceList" element={<PriceList/>}/>
       </Routes>
     </BrowserRouter>
   );

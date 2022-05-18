@@ -1,7 +1,6 @@
 package com.Webpage.Nailshop.controller;
 
 import com.Webpage.Nailshop.Service.DetailsService;
-import com.Webpage.Nailshop.model.ModProducts;
 import com.Webpage.Nailshop.repository.DetailsRepository;
 import com.Webpage.Nailshop.model.ModDetails;
 import org.springframework.beans.factory.annotation.Autowired;

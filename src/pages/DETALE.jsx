@@ -106,6 +106,8 @@ const Button = styled.button`
 `;
 
 const DETALE = ({product_item}) => {
+
+  
   return (
           <Container>
       <Wrapper>
@@ -131,7 +133,7 @@ const DETALE = ({product_item}) => {
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button>DODAJ DO KOSZYKA</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

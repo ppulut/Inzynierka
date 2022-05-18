@@ -129,7 +129,7 @@ const ProductDetails = ({item}) => {
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button>DODAJ DO KOSZYKA</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

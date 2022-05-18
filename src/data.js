@@ -24,7 +24,7 @@ export const sliderItems = [
 
   export const categories = [
     {
-      link: "",
+      link: "PriceList",
       img: "https://media.istockphoto.com/photos/beautiful-woman-with-red-lips-and-manicure-picture-id873929080?k=20&m=873929080&s=612x612&w=0&h=3uxy3CJPXfPaqxnLhMYFMpCLElks88nqZwbH3Am0_RQ=",
       title: "CENNIK",
     },

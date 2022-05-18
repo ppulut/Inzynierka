@@ -23,5 +23,10 @@ public class ModProducts {
     @Column(name = "Price")
     private String price;
 
+    @Column(name = "Opis")
+    private String opis;
 
+    @OneToOne
+    @JoinColumn(name = "product_id")
+    private ModDetails modDetails;
 }
