@@ -1,7 +1,14 @@
+.koko {
+display: inline-table;
+width:30%;
+margin-left: 40px;
+}
+
 .bg-gradient {
     background: #C9D6FF;
     background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF); 
     background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    
     
     } 
     ul li {
@@ -12,6 +19,8 @@
     background: #faafcf;
     padding: 1em 0 4em;
     position: relative;
+    width:100%
+    
     }
     .blue .pricing-divider{
     background: #2D5772; 
@@ -34,6 +43,7 @@
         left: 0;
         width: 100%;
         height: 80px;
+        
     }
     .deco-layer {
         -webkit-transition: "-webkit-transform 0.5s";
@@ -64,5 +74,4 @@
       transform: translate3d(-15px, 0, 0);
       transition: all 200ms ease-out;
     }
-    
     

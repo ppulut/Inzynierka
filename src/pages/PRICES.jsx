@@ -8,12 +8,12 @@ import '../App.css';
 
 const PRICE = ({item}) => {
   return (
-
+<div class="koko">
     <div class="row">
       <div class="container-fluid bg-gradient p-5">
       <div class="col m-auto text-center w-75">
         
-        <div class="col-4 princing-item red">
+        <div class="col-auto princing-item red">
           <div class="pricing-divider ">
               <h3 class="text-light">{item.name}</h3>
             <h4 class="my-0 display-2 text-light font-weight-normal mb-3">{item.cena}<span class="h3">{item.waluta}</span></h4>
@@ -35,15 +35,13 @@ const PRICE = ({item}) => {
               <li><b>Free </b>Email support</li>
               <li><b>Help center access</b></li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block  btn-custom ">Sign up for free</button>
+            <button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button>
           </div>
         </div>
-
-        
         </div>  
       </div>
     </div>
-
+</div>
     
 
   )

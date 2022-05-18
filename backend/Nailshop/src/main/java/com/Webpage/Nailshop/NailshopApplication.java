@@ -164,5 +164,56 @@ public class NailshopApplication implements CommandLineRunner {
 		price4.setWaluta("zł");
 		priceRepository.save(price4);
 
+		ModPrice price5 = new ModPrice();
+		price5.setName("Parafinowanie dłoni");
+		price5.setCena("15");
+		price5.setWaluta("zł");
+		priceRepository.save(price5);
+
+		ModPrice price6 = new ModPrice();
+		price6.setName("Masaż dłoni na peelingu");
+		price6.setCena("10");
+		price6.setWaluta("zł");
+		priceRepository.save(price6);
+
+		ModPrice price7 = new ModPrice();
+		price7.setName("Regeneracja dłoni");
+		price7.setCena("35");
+		price7.setWaluta("zł");
+		priceRepository.save(price7);
+
+		ModPrice price8 = new ModPrice();
+		price8.setName("Usunięcie stylizacji");
+		price8.setCena("25");
+		price8.setWaluta("zł");
+		priceRepository.save(price8);
+
+		ModPrice price9 = new ModPrice();
+		price9.setName("Geometria i regulacja brwi");
+		price9.setCena("20");
+		price9.setWaluta("zł");
+		priceRepository.save(price9);
+
+		ModPrice price10 = new ModPrice();
+		price10.setName("Geometria, regulacja i farbka brwi");
+		price10.setCena("40");
+		price10.setWaluta("zł");
+		priceRepository.save(price10);
+
+		ModPrice price11 = new ModPrice();
+		price11.setName("Laminacja, geometria, regulacja i farbka brwi");
+		price11.setCena("60");
+		price11.setWaluta("zł");
+		priceRepository.save(price11);
+
+		ModPrice price12 = new ModPrice();
+		price12.setName("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
+		price12.setCena("");
+		price12.setWaluta("zł");
+		priceRepository.save(price12);
+
+
+
+
 	}
 }
