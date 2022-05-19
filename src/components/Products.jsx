@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react'
 import DataServices from '../services/DataServices'
 import styled from 'styled-components'
 import Product from './Product'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
 display: flex;
 padding: 35px;
 justify-content: space-between;
+${mobile({ padding: "0px", flexDirection:"column" })}
+${mobile({ width: "80%" })}
 display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2);

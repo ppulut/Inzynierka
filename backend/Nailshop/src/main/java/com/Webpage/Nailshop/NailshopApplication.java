@@ -134,7 +134,7 @@ public class NailshopApplication implements CommandLineRunner {
 		categoryRepository.save(category3);
 
 		ModCategory category4 = new ModCategory();
-		category4.setLink("");
+		category4.setLink("Gallery");
 		category4.setImg("https://media.istockphoto.com/photos/girl-with-the-nail-in-hand-on-white-background-picture-id898398096?k=20&m=898398096&s=612x612&w=0&h=oyGe7JZq0tb0Jtyb2TaB3an0Cuxmt399CpC2VZ5tCdE=");
 		category4.setTitle("GALERIA");
 		categoryRepository.save(category4);

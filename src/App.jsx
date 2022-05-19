@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDet from "./pages/ProductDet";
 import PriceList from "./pages/PriceList";
+import Gallery from "./pages/Gallery";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/ProductDet/:id" element={<ProductDet/>}/>
       <Route path="/ProductsPage" element={<ProductsPage/>}/>
       <Route path="/PriceList" element={<PriceList/>}/>
+      <Route path="/Gallery" element={<Gallery/>}/>
       </Routes>
     </BrowserRouter>
   );

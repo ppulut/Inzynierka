@@ -2,7 +2,7 @@ import {ShoppingCartOutlined } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
 import {Link } from "react-router-dom";
-
+import { mobile } from '../responsive';
 
   const Info = styled.div`
   opacity: 0;
@@ -28,7 +28,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  ${mobile({ padding: "0px", flexDirection:"column" })}
+  ${mobile({ width: "80%" })}
   position: relative;
   &:hover ${Info}{
     opacity: 1;

@@ -2,9 +2,11 @@ import { Facebook, Instagram, Twitter, Phone, MailOutline } from '@mui/icons-mat
 import React from 'react'
 import styled from 'styled-components'
 import {Link } from "react-router-dom";
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 display: flex;
+${mobile({ flexDirection: "column" })}
 `
 
 const Lewo = styled.div`
@@ -97,7 +99,7 @@ const Footer = () => {
        <Center>
        <Title>Przydatne linki</Title>
         <List>
-        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/PriceList"}>
           <ListItem>Cennik</ListItem></Link>
 
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
