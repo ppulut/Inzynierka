@@ -102,7 +102,7 @@ const Footer = () => {
         <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/PriceList"}>
           <ListItem>Cennik</ListItem></Link>
 
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Galeria"}>
           <ListItem>Galeria</ListItem></Link>
 
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>

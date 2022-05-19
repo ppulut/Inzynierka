@@ -97,11 +97,11 @@ const Register = () => {
                             value={login}
                             onChange={(e)=>setLogin(e.target.value)}
               />
-              <Input placeholder="Hasło"
+              <Input type="password" placeholder="Hasło"
                             value={password}
                             onChange={(e)=>setPassword(e.target.value)}
               />
-              <Input placeholder="Potwierdź hasło"
+              <Input type="password" placeholder="Potwierdź hasło"
                             value={rePassword}
                             onChange={(e)=>setRePassword(e.target.value)}
               />

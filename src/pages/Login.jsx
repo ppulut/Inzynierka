@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import React, { useState } from 'react'
 import {Link } from "react-router-dom";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 const Container = styled.div`
@@ -68,6 +70,8 @@ const Login = () => {
   const[login,setLogin]=useState('')
   const[password,setPassword]=useState('')
   return (
+    <div>
+      <Navbar/>
     <Container>
     <Wrapper>
         <Title>ZALOGUJ SIĘ</Title>
@@ -76,7 +80,7 @@ const Login = () => {
             value={login}
             onChange={(e)=>setLogin(e.target.value)}
             />
-            <Input placeholder="Hasło"
+            <Input type="password" placeholder="Hasło"
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />
@@ -92,6 +96,8 @@ const Login = () => {
     </Wrapper>
 
 </Container>
+<Footer/>
+</div>
   )
 }
 

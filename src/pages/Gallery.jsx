@@ -1,21 +1,21 @@
-import React, {useState, useEffect } from 'react'
+import React, {useEffect } from 'react'
 import '../Gallery.css';
-import DataServices from '../services/DataServices'
-import styled from 'styled-components'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import Galeria from '../components/Galeria';
-import Newsletter from '../components/Newsletter';
 
 
 
 const Gallery = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
     return (
        <div>
             <Navbar/>
             <Galeria/>
-            <Newsletter/>
             </div>
     )
       }
