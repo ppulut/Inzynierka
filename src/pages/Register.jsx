@@ -61,11 +61,11 @@ const Register = () => {
   const[surname,setSurname]=useState('')
   const[login,setLogin]=useState('')
   const[password,setPassword]=useState('')
-  const[rePassword,setRePassword]=useState('')
+  const[repassword,setRePassword]=useState('')
 
   const handleClick=(e)=>{
     e.preventDefault()
-    const user={name,surname,login,password,rePassword}
+    const user={name,surname,login,password,repassword}
     console.log(user)
 
  fetch("http://localhost:8080/users/add",{
@@ -74,7 +74,8 @@ const Register = () => {
       body:JSON.stringify(user)
 
   }).then(()=>{
-    console.log("New Student added")
+    console.log("New user added")
+    window.location.reload();
   })
 }
 
@@ -102,7 +103,7 @@ const Register = () => {
                             onChange={(e)=>setPassword(e.target.value)}
               />
               <Input type="password" placeholder="Potwierdź hasło"
-                            value={rePassword}
+                            value={repassword}
                             onChange={(e)=>setRePassword(e.target.value)}
               />
             <Button onClick={handleClick}>Utwórz</Button>

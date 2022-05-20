@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import {Link } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import axios from 'axios'
 
 
 const Container = styled.div`
@@ -67,8 +68,21 @@ margin: 5px 0px;
 
 
 const Login = () => {
-  const[login,setLogin]=useState('')
-  const[password,setPassword]=useState('')
+  const [login, setLogin] = useState('')
+  const [password, setPassword] = useState('')
+
+
+
+  const loginUser = (e) => {
+    axios.get('http://localhost:8080/user/Allusers',{
+    }).then(response => {
+
+      console.log((login,password,response.data))
+    }).catch(error =>{
+      console.log(error);
+    });
+}
+
   return (
     <div>
       <Navbar/>
@@ -84,7 +98,10 @@ const Login = () => {
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />
-          <Button>ZALOGUJ</Button>
+          <Button onClick={() => loginUser()}>ZALOGUJ</Button>
+
+
+
 
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
               <Menu>NIE PAMIĘTASZ HASŁA?</Menu>

@@ -2,6 +2,7 @@ package com.Webpage.Nailshop.controller;
 
 import com.Webpage.Nailshop.Service.UsersService;
 import com.Webpage.Nailshop.model.Users;
+import com.Webpage.Nailshop.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,19 +11,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin
+@CrossOrigin("*")
 public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    @PostMapping("/add")
-    public String add(@RequestBody Users users){
-        usersService.saveUsers(users);
-        return "New user is added";
-    }
+    @Autowired
+    private UsersRepository usersRepository;
 
     @GetMapping("/getAll")
     public List<Users> list(){
         return usersService.getAllUsers();
     }
+    @PostMapping("/add")
+    public String add(@RequestBody Users users){
+        usersRepository.save(users);
+        return "New user is added";
+    }
+
 }
