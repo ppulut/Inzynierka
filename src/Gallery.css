@@ -1,5 +1,5 @@
 .con{
-    width:100%;
+    width:80%;
     height:fit-content;
     background:rgb(255, 255, 255);
   display: inline-block;
@@ -20,8 +20,8 @@
   }
   .divs img{
     position:relative;
-    width:70%;
-    height:70%;
+    width:50%;
+    height:50%;
     margin:15%;
     background:#ddd;
     box-shadow:0 0 1px 1px rgba(0,0,0,.2);
