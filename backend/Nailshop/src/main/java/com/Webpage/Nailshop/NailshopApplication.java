@@ -122,7 +122,7 @@ public class NailshopApplication implements CommandLineRunner {
 		categoryRepository.save(category1);
 
 		ModCategory category2 = new ModCategory();
-		category2.setLink("");
+		category2.setLink("Services");
 		category2.setImg("https://media.istockphoto.com/photos/hardware-removal-of-the-old-shellac-from-the-nails-in-the-salon-by-picture-id1184545294?k=20&m=1184545294&s=612x612&w=0&h=KvbshnuX6jjTT8h5rSMTqeyzTTSe6vg8H5ZvZBZi-cY=");
 		category2.setTitle("OPIS USŁUG");
 		categoryRepository.save(category2);

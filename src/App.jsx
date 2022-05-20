@@ -6,6 +6,7 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductDet from "./pages/ProductDet";
 import PriceList from "./pages/PriceList";
 import Gallery from "./pages/Gallery";
+import Services from "./pages/Services";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/ProductsPage" element={<ProductsPage/>}/>
       <Route path="/PriceList" element={<PriceList/>}/>
       <Route path="/Gallery" element={<Gallery/>}/>
+      <Route path="/Services" element={<Services/>}/>
       </Routes>
     </BrowserRouter>
   );
