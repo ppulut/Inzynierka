@@ -34,7 +34,7 @@ const Galeria = () => {
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/1.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/2.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/3.jpg"/></div>
-          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/4.jpg"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/18.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/5.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/6.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/7.jpg"/></div>
@@ -48,7 +48,7 @@ const Galeria = () => {
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/15.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/16.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/17.jpg"/></div>
-          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/18.jpg"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/4.jpg"/></div>
 
 
 </div>
