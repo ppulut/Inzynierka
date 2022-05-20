@@ -31,8 +31,8 @@ const Galeria = () => {
           <Nav>Galeria</Nav>
           <div class="con">
           <div class="uls">
-          <div class="divs"><img src="blob:https://web.whatsapp.com/fb7a2679-60e6-49b7-87e7-6734729be0fb"/></div>
-          <div class="divs"><img src="https://www.new-nails.com/wp-content/uploads/2017/01/kurs-zdobienia-paznokci-barok.jpg"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/1.jpg?token=GHSAT0AAAAAABTVTFI4J7TJERWQIT7JESJ6YUHOG3Q"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/2.jpg?token=GHSAT0AAAAAABTVTFI5LHL5KNG4QJQ7KTXKYUHOG6A"/></div>
           <div class="divs"><img src="https://www.new-nails.com/wp-content/uploads/2017/01/kurs-zdobienia-paznokci-barok.jpg"/></div>
           <div class="divs"><img src="https://www.new-nails.com/wp-content/uploads/2017/01/kurs-zdobienia-paznokci-barok.jpg"/></div>
           <div class="divs"><img src="https://www.new-nails.com/wp-content/uploads/2017/01/kurs-zdobienia-paznokci-barok.jpg"/></div>
