@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 
 const Nav = styled.h1`
-font-size: 28px;
+font-size: 36px;
 color: rgb(26, 26, 26);
 font-weight: bold;
 padding:30px;
@@ -34,7 +34,7 @@ const Galeria = () => {
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/1.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/2.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/3.jpg"/></div>
-          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/18.jpg"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/4.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/5.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/6.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/7.jpg"/></div>
@@ -48,7 +48,7 @@ const Galeria = () => {
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/15.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/16.jpg"/></div>
           <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/17.jpg"/></div>
-          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/4.jpg"/></div>
+          <div class="divs"><img src="https://raw.githubusercontent.com/ppulut/Inzynierka/master/galeria/18.jpg"/></div>
 
 
 </div>
