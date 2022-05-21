@@ -20,6 +20,10 @@ class DataServices{
         return axios.get(URL+"/prices/AllPrices")
     }
 
+    getServices(){
+        return axios.get(URL + "/services/AllServices")
+    }
+
 
 }
 

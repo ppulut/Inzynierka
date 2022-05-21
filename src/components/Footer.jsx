@@ -87,9 +87,9 @@ const Footer = () => {
                 <MediaIcon color="1B74E4"> 
                     <Facebook/>
                 </MediaIcon>
-                <MediaIcon color="E4405F">
+                <a href='https://www.instagram.com/carollisee_nails/'><MediaIcon color="E4405F">
                     <Instagram/>
-                </MediaIcon>
+                </MediaIcon></a>
                 <MediaIcon color="55ACEE">
                     <Twitter/>
                 </MediaIcon>
@@ -102,7 +102,7 @@ const Footer = () => {
         <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/PriceList"}>
           <ListItem>Cennik</ListItem></Link>
 
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Galeria"}>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Gallery"}>
           <ListItem>Galeria</ListItem></Link>
 
           <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>

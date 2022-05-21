@@ -32,6 +32,9 @@ public class NailshopApplication implements CommandLineRunner {
 	@Autowired
 	public PriceRepository priceRepository;
 
+	@Autowired
+	public ServiceRepository serviceRepository;
+
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -144,12 +147,14 @@ public class NailshopApplication implements CommandLineRunner {
 		price1.setName("Manicure klasyczny");
 		price1.setCena("35");
 		price1.setWaluta("zł");
+		price1.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price1);
 
 		ModPrice price2 = new ModPrice();
 		price2.setName("Manicure japoński");
 		price2.setCena("45");
 		price2.setWaluta("zł");
+		price2.setImg("https://www.pronails.pl/sites/default/files/styles/paragraphs_680/public/paragraphs/website_content_images_680x680_nailart9_8.jpg?itok=_rq5r1HL&timestamp=1600083626");
 		priceRepository.save(price2);
 
 		ModPrice price3 = new ModPrice();
@@ -208,9 +213,42 @@ public class NailshopApplication implements CommandLineRunner {
 
 		ModPrice price12 = new ModPrice();
 		price12.setName("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
-		price12.setCena("");
+		price12.setCena("10");
 		price12.setWaluta("zł");
 		priceRepository.save(price12);
+
+
+		ModService service1 = new ModService();
+		service1.setTitle("Manicure klasyczny");
+		service1.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service1);
+
+		ModService service2 = new ModService();
+		service2.setTitle("Manicure klasyczny");
+		service2.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service2);
+
+
+		ModService service3 = new ModService();
+		service3.setTitle("Manicure klasyczny");
+		service3.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service3);
+
+
+		ModService service4 = new ModService();
+		service4.setTitle("Manicure klasyczny");
+		service4.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service4);
+
+		ModService service5 = new ModService();
+		service5.setTitle("Manicure klasyczny");
+		service5.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service5);
+
+		ModService service6 = new ModService();
+		service6.setTitle("Manicure klasyczny");
+		service6.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service6);
 
 
 

@@ -27,10 +27,9 @@ const PRICE = ({item}) => {
           </div>
           <div class="card-body bg-white mt-0 shadow">
             <ul class="list-unstyled mb-5 position-relative">
-              <li><b>10</b> users included</li>
-              <li><b>2 GB</b> of storage</li>
-              <li><b>Free </b>Email support</li>
-              <li><b>Help center access</b></li>
+        <div class="imgdiv">
+        <img class="imggg" src={item.img}></img>
+          </div>
             </ul>
             <button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button>
           </div>

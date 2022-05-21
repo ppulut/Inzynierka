@@ -11,7 +11,7 @@ const Container = styled.div`
 
 `
 const Nav = styled.h1`
-font-size: 28px;
+font-size: 36px;
 color: rgb(26, 26, 26);
 font-weight: bold;
 padding:30px;
