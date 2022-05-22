@@ -1,6 +1,18 @@
 import axios from 'axios'
 
+
 const URL = "http://localhost:8080";
+
+export const alertService = {
+    alert,
+};
+
+export const alertType = {
+    success: 'success',
+    error: 'error',
+    info: 'info',
+    warning: 'warning'
+}
 
 class DataServices{
 
@@ -24,6 +36,9 @@ class DataServices{
         return axios.get(URL + "/services/AllServices")
     }
 
+    success(message, options) {
+        alert({ ...options, type: alertType.success, message });
+    }
 
 }
 

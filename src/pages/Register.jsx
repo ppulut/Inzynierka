@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import {Alert} from "react-bootstrap";
 
 const Container = styled.div`
 width: 100vw;
@@ -55,6 +56,13 @@ color: white;
 cursor: pointer;
 `
 
+const Alerto = styled.div`
+margin: 20px 10px 0px 0px;
+padding: 10px;
+border: none;
+
+`
+
 const Register = () => {
 
   const[name,setName]=useState('')
@@ -62,6 +70,7 @@ const Register = () => {
   const[login,setLogin]=useState('')
   const[password,setPassword]=useState('')
   const[repassword,setRePassword]=useState('')
+  const [show, setShow] = useState(false);
 
   const handleClick=(e)=>{
     e.preventDefault()
@@ -73,9 +82,9 @@ const Register = () => {
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(user)
 
-  }).then(()=>{
+  }).then((confirm)=>{
     console.log("New user added")
-    window.location.reload();
+    setShow(true);
   })
 }
 
@@ -106,7 +115,12 @@ const Register = () => {
                             value={repassword}
                             onChange={(e)=>setRePassword(e.target.value)}
               />
-            <Button onClick={handleClick}>Utwórz</Button>
+            <Button variant="success" onClick={handleClick}>Utwórz</Button>
+            {show && (
+            <Alerto><Alert variant="success" onClose={() => setShow(true)}>
+              Zarejestrowano pomyślnie
+          </Alert></Alerto>
+            )}
           </Form>
       </Wrapper>
 
