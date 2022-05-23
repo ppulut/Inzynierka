@@ -224,32 +224,61 @@ public class NailshopApplication implements CommandLineRunner {
 		serviceRepository.save(service1);
 
 		ModService service2 = new ModService();
-		service2.setTitle("Manicure klasyczny");
+		service2.setTitle("Manicure japoński");
 		service2.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
 		serviceRepository.save(service2);
 
 
 		ModService service3 = new ModService();
-		service3.setTitle("Manicure klasyczny");
+		service3.setTitle("Manicure hybrydowy");
 		service3.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
 		serviceRepository.save(service3);
 
 
 		ModService service4 = new ModService();
-		service4.setTitle("Manicure klasyczny");
+		service4.setTitle("Manicure żelowy");
 		service4.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
 		serviceRepository.save(service4);
 
 		ModService service5 = new ModService();
-		service5.setTitle("Manicure klasyczny");
+		service5.setTitle("Parafinowanie dłoni");
 		service5.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
 		serviceRepository.save(service5);
 
 		ModService service6 = new ModService();
-		service6.setTitle("Manicure klasyczny");
+		service6.setTitle("Masaż dłoni na peelingu");
 		service6.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
 		serviceRepository.save(service6);
 
+		ModService service7 = new ModService();
+		service7.setTitle("Regeneracja dłoni");
+		service7.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service7);
+
+		ModService service8 = new ModService();
+		service8.setTitle("Usunięcie stylizacji");
+		service8.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service8);
+
+		ModService service9 = new ModService();
+		service9.setTitle("Geometria i regulacja brwi");
+		service9.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service9);
+
+		ModService service10 = new ModService();
+		service10.setTitle("Geometria, regulacja i farbka brwi");
+		service10.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service10);
+
+		ModService service11 = new ModService();
+		service11.setTitle("Laminacja, geometria, regulacja i farbka brwi");
+		service11.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service11);
+
+		ModService service12 = new ModService();
+		service12.setTitle("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
+		service12.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		serviceRepository.save(service12);
 
 	}
 }

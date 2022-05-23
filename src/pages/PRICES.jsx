@@ -28,7 +28,7 @@ const PRICE = ({item}) => {
           <div class="card-body bg-white mt-0 shadow">
             <ul class="list-unstyled mb-5 position-relative">
         <div class="imgdiv">
-        <img class="imggg" src={item.img}></img>
+        <img alt='img' class="imggg" src={item.img}></img>
           </div>
             </ul>
             <button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button>
