@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {Link } from "react-router-dom";
 import { mobile } from '../responsive';
 
+
   const Info = styled.div`
   opacity: 0;
   width: 100%;
