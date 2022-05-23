@@ -7,6 +7,7 @@ import ProductDet from "./pages/ProductDet";
 import PriceList from "./pages/PriceList";
 import Gallery from "./pages/Gallery";
 import Services from "./pages/Services";
+import ContactUs from "./pages/ContactUs";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/PriceList" element={<PriceList/>}/>
       <Route path="/Gallery" element={<Gallery/>}/>
       <Route path="/Services" element={<Services/>}/>
+      <Route path="/ContactUs" element={<ContactUs/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -23,8 +23,5 @@ public class ModPrice {
     @Column(name = "Waluta")
     private String waluta;
 
-    @Column(name = "Image")
-    private String img;
-
 
 }
