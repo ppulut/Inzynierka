@@ -145,77 +145,77 @@ public class NailshopApplication implements CommandLineRunner {
 
 		ModPrice price1 = new ModPrice();
 		price1.setName("Manicure klasyczny");
-		price1.setCena("35");
+		price1.setCena("55");
 		price1.setWaluta("zł");
 		price1.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price1);
 
 		ModPrice price2 = new ModPrice();
 		price2.setName("Manicure japoński");
-		price2.setCena("45");
+		price2.setCena("80");
 		price2.setWaluta("zł");
 		price2.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price2);
 
 		ModPrice price3 = new ModPrice();
 		price3.setName("Manicure hybrydowy");
-		price3.setCena("60");
+		price3.setCena("100");
 		price3.setWaluta("zł");
 		price3.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price3);
 
 		ModPrice price4 = new ModPrice();
 		price4.setName("Manicure żelowy");
-		price4.setCena("80");
+		price4.setCena("130");
 		price4.setWaluta("zł");
 		price4.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price4);
 
 		ModPrice price5 = new ModPrice();
 		price5.setName("Parafinowanie dłoni");
-		price5.setCena("15");
+		price5.setCena("30");
 		price5.setWaluta("zł");
 		price5.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price5);
 
 		ModPrice price6 = new ModPrice();
 		price6.setName("Masaż dłoni na peelingu");
-		price6.setCena("10");
+		price6.setCena("20");
 		price6.setWaluta("zł");
 		price6.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price6);
 
 		ModPrice price7 = new ModPrice();
 		price7.setName("Regeneracja dłoni");
-		price7.setCena("35");
+		price7.setCena("60");
 		price7.setWaluta("zł");
 		price7.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price7);
 
 		ModPrice price8 = new ModPrice();
 		price8.setName("Usunięcie stylizacji");
-		price8.setCena("25");
+		price8.setCena("30");
 		price8.setWaluta("zł");
 		price8.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price8);
 
 		ModPrice price9 = new ModPrice();
 		price9.setName("Geometria i regulacja brwi");
-		price9.setCena("20");
+		price9.setCena("40");
 		price9.setWaluta("zł");
 		price9.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price9);
 
 		ModPrice price10 = new ModPrice();
 		price10.setName("Geometria, regulacja i farbka brwi");
-		price10.setCena("40");
+		price10.setCena("80");
 		price10.setWaluta("zł");
 		price10.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price10);
 
 		ModPrice price11 = new ModPrice();
 		price11.setName("Laminacja, geometria, regulacja i farbka brwi");
-		price11.setCena("60");
+		price11.setCena("120");
 		price11.setWaluta("zł");
 		price11.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price11);
@@ -230,64 +230,67 @@ public class NailshopApplication implements CommandLineRunner {
 
 		ModService service1 = new ModService();
 		service1.setTitle("Manicure klasyczny");
-		service1.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service1.setOpis("Zabieg polegający na nadaniu pożądanego kształtu paznokciom, następnie odsunięciu i podniesieniu skórek frezem, a następnie usunięciu ich.");
+		service1.setOpis2("W dalszej części zabiegu następuje pomalowanie paznokci lakierem klasycznym lub odżywką. Zabieg wykańczany jest peelingiem dłoni z nałożeniem odżywczego masła.");
 		serviceRepository.save(service1);
 
 		ModService service2 = new ModService();
 		service2.setTitle("Manicure japoński");
-		service2.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service2.setOpis("Zabieg w całości składający się z naturalnych składników - pasty wcierane w płytkę paznokcia; zawierają między innymi: keratynę, pyłek pszczeli oraz witaminę A i E.");
+		service2.setOpis2("Zabieg jest nieinwazyjny - nie używamy ostrych narzędzi.");
 		serviceRepository.save(service2);
 
 
 		ModService service3 = new ModService();
 		service3.setTitle("Manicure hybrydowy");
-		service3.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service3.setOpis("Zabieg polegający na aplikacji na naturalną płytkę paznokcia lakieru hybrydowego, utwardzonego w lampie UV/LED.");
+		service3.setOpis2("");
 		serviceRepository.save(service3);
 
 
 		ModService service4 = new ModService();
 		service4.setTitle("Manicure żelowy");
-		service4.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service4.setOpis("Zabieg polegający na aplikacji żelu na naturalną płytkę paznokcia, bądź uzupełnieniu stylizacji żelowej, a następnie aplikacji koloru hybrydowego.");
 		serviceRepository.save(service4);
 
 		ModService service5 = new ModService();
 		service5.setTitle("Parafinowanie dłoni");
-		service5.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service5.setOpis("Zabieg pielęgnacyjny, polegający na zastosowaniu ciepłej parafiny na dłonie i paznokcie. Zabieg poprzedzony jest peelingiem dłoni.");
 		serviceRepository.save(service5);
 
 		ModService service6 = new ModService();
 		service6.setTitle("Masaż dłoni na peelingu");
-		service6.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service6.setOpis("Zabieg relaksacyjny na dłonie.");
 		serviceRepository.save(service6);
 
 		ModService service7 = new ModService();
 		service7.setTitle("Regeneracja dłoni");
-		service7.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service7.setOpis("Zabieg regenerujący, polegający na wykonaniu masażu dłoni na peelingu, parafinowaniu dłoni oraz nałożeniu odżywczego masła na dłonie.");
 		serviceRepository.save(service7);
 
 		ModService service8 = new ModService();
 		service8.setTitle("Usunięcie stylizacji");
-		service8.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service8.setOpis("Zabieg polegający na usunięciu starej stylizacji.");
 		serviceRepository.save(service8);
 
 		ModService service9 = new ModService();
 		service9.setTitle("Geometria i regulacja brwi");
-		service9.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service9.setOpis("Zabieg polegający na wykonaniu architektury brwi tj. geometrii brwi oraz regulacji.");
 		serviceRepository.save(service9);
 
 		ModService service10 = new ModService();
 		service10.setTitle("Geometria, regulacja i farbka brwi");
-		service10.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service10.setOpis("Zabieg polegający na wykonaniu architektury brwi tj. geometrii brwi oraz regulacji. W dalszej części zabiegu wykonywana jest koloryzacja brwi farbką");
 		serviceRepository.save(service10);
 
 		ModService service11 = new ModService();
 		service11.setTitle("Laminacja, geometria, regulacja i farbka brwi");
-		service11.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service11.setOpis("Zabieg polega na wykoniu laminacji brwi, następnie wykonywana jest geometria, regulacja oraz koloryzacja brwi farbką.");
 		serviceRepository.save(service11);
 
 		ModService service12 = new ModService();
 		service12.setTitle("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
-		service12.setOpis("Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i drożyzna Bla bla bla literki, inflacja, kredyty i y i drożyzna");
+		service12.setOpis("Zabieg polegający na przedłużeniu paznokcia bazą lub żelem na szablonie, bądź tipsie tunelowym");
 		serviceRepository.save(service12);
 
 	}

@@ -16,6 +16,7 @@ const SERVICE = ({item}) => {
                     <div class="feature-content">
                         <h5>{item.title}</h5>
                         <p>{item.opis}</p>
+                        <p>{item.opis2}</p>
                     </div>
                 </div>
             </div>

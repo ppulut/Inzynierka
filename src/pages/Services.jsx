@@ -43,7 +43,7 @@ const Services = () => {
             <div class="col-lg-6">
                 <div class="section-title">
                     <h2>Czym się zajmuję</h2>
-                    <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites</p>
+                    <p>I Na codzień zajmuję się stylizacją paznokci, brwi i rzęs oraz pielęgnacją dłoni</p>
                 </div>
             </div>
         </div>

@@ -16,8 +16,8 @@ export const sliderItems = [
     {
       id: 3,
       img: "https://img.redro.pl/plakaty/nail-art-hand-drawn-logo-design-template-700-194908955.jpg",
-      title: "LOUNGEWEAR LOVE",
-      opis: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      title: "BĄDŹ NA BIEŻĄCO",
+      opis: "Dołącz do naszego newslettera, by być na bieżąco z naszymi nowościami.",
       bg: "white",
     },
   ];
