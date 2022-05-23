@@ -147,14 +147,14 @@ public class NailshopApplication implements CommandLineRunner {
 		price1.setName("Manicure klasyczny");
 		price1.setCena("55");
 		price1.setWaluta("zł");
-		price1.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
+		price1.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/1.jpg");
 		priceRepository.save(price1);
 
 		ModPrice price2 = new ModPrice();
 		price2.setName("Manicure japoński");
 		price2.setCena("80");
 		price2.setWaluta("zł");
-		price2.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
+		price2.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/1-1.jpg");
 		priceRepository.save(price2);
 
 		ModPrice price3 = new ModPrice();
