@@ -251,7 +251,5 @@ public class NailshopApplication implements CommandLineRunner {
 		serviceRepository.save(service6);
 
 
-
-
 	}
 }
