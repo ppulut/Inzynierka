@@ -5,8 +5,11 @@ import DataServices from '../services/DataServices'
 import styled from 'styled-components'
 import SERVICE from './SERVICE'
 import "../ServiceDesign.css"
+import { mobile } from "../responsive";
 
 const Container = styled.div`
+${mobile({ textAlign: "center" })}
+${mobile({ width: "80%" })}
 
 `
 const Nav = styled.h1`
@@ -15,6 +18,8 @@ color: rgb(26, 26, 26);
 font-weight: bold;
 padding:30px;
 margin: 4px 12px 8px
+${mobile({ textAlign: "center" })}
+${mobile({ width: "80%" })}
 `
 
 const Services = () => {

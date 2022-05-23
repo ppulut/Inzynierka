@@ -154,67 +154,77 @@ public class NailshopApplication implements CommandLineRunner {
 		price2.setName("Manicure japoński");
 		price2.setCena("45");
 		price2.setWaluta("zł");
-		price2.setImg("https://www.pronails.pl/sites/default/files/styles/paragraphs_680/public/paragraphs/website_content_images_680x680_nailart9_8.jpg?itok=_rq5r1HL&timestamp=1600083626");
+		price2.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price2);
 
 		ModPrice price3 = new ModPrice();
 		price3.setName("Manicure hybrydowy");
 		price3.setCena("60");
 		price3.setWaluta("zł");
+		price3.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price3);
 
 		ModPrice price4 = new ModPrice();
 		price4.setName("Manicure żelowy");
 		price4.setCena("80");
 		price4.setWaluta("zł");
+		price4.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price4);
 
 		ModPrice price5 = new ModPrice();
 		price5.setName("Parafinowanie dłoni");
 		price5.setCena("15");
 		price5.setWaluta("zł");
+		price5.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price5);
 
 		ModPrice price6 = new ModPrice();
 		price6.setName("Masaż dłoni na peelingu");
 		price6.setCena("10");
 		price6.setWaluta("zł");
+		price6.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price6);
 
 		ModPrice price7 = new ModPrice();
 		price7.setName("Regeneracja dłoni");
 		price7.setCena("35");
 		price7.setWaluta("zł");
+		price7.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price7);
 
 		ModPrice price8 = new ModPrice();
 		price8.setName("Usunięcie stylizacji");
 		price8.setCena("25");
 		price8.setWaluta("zł");
+		price8.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price8);
 
 		ModPrice price9 = new ModPrice();
 		price9.setName("Geometria i regulacja brwi");
 		price9.setCena("20");
 		price9.setWaluta("zł");
+		price9.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price9);
 
 		ModPrice price10 = new ModPrice();
 		price10.setName("Geometria, regulacja i farbka brwi");
 		price10.setCena("40");
 		price10.setWaluta("zł");
+		price10.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price10);
 
 		ModPrice price11 = new ModPrice();
 		price11.setName("Laminacja, geometria, regulacja i farbka brwi");
 		price11.setCena("60");
 		price11.setWaluta("zł");
+		price11.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price11);
 
 		ModPrice price12 = new ModPrice();
 		price12.setName("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
 		price12.setCena("10");
 		price12.setWaluta("zł");
+		price12.setImg("https://d-art.ppstatic.pl/kadry/k/r/1/42/06/6283837019bcd_o_medium.jpg");
 		priceRepository.save(price12);
 
 
