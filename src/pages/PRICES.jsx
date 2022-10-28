@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css';
+import {Link } from "react-router-dom";
 
 
 
@@ -31,7 +32,8 @@ const PRICE = ({item}) => {
         <img alt='img' class="imggg" src={item.img}></img>
           </div>
             </ul>
-            <button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button>
+            
+            <Link to={"/Calendar"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button></Link>
           </div>
         </div>
         </div>  

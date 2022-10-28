@@ -8,6 +8,7 @@ import PriceList from "./pages/PriceList";
 import Gallery from "./pages/Gallery";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
+import Calendar from "./pages/CALENDAR";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Route path="/Gallery" element={<Gallery/>}/>
       <Route path="/Services" element={<Services/>}/>
       <Route path="/ContactUs" element={<ContactUs/>}/>
+      <Route path="/CALENDAR" element={<Calendar/>}/>
       </Routes>
     </BrowserRouter>
   );

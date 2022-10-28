@@ -35,6 +35,9 @@ public class NailshopApplication implements CommandLineRunner {
 	@Autowired
 	public ServiceRepository serviceRepository;
 
+	@Autowired
+	public Reservation reservation;
+
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -292,6 +295,11 @@ public class NailshopApplication implements CommandLineRunner {
 		service12.setTitle("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
 		service12.setOpis("Zabieg polegający na przedłużeniu paznokcia bazą lub żelem na szablonie, bądź tipsie tunelowym");
 		serviceRepository.save(service12);
+
+		ModReservation reservation1 = new ModReservation();
+		reservation1.setData("Dec 15 2022");
+		reservation1.setHour("12:00");
+		reservation.save(reservation1);
 
 	}
 }
