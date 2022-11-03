@@ -33,7 +33,7 @@ const PRICE = ({item}) => {
           </div>
             </ul>
             
-            <Link to={"/Calendar"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button></Link>
+            <Link to={"/Calendar2"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button></Link>
           </div>
         </div>
         </div>  

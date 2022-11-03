@@ -9,6 +9,7 @@ import Gallery from "./pages/Gallery";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Calendar from "./pages/CALENDAR";
+import Calendar2 from "./pages/CALENDAR2";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Route path="/Services" element={<Services/>}/>
       <Route path="/ContactUs" element={<ContactUs/>}/>
       <Route path="/CALENDAR" element={<Calendar/>}/>
+      <Route path="/CALENDAR2" element={<Calendar2/>}/>
       </Routes>
     </BrowserRouter>
   );

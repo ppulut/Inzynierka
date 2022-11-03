@@ -9,6 +9,8 @@ import DatePicker from "react-datepicker";
 import TimePicker from 'rc-time-picker-date-fns';
 import "react-datepicker/dist/react-datepicker.css";
 import "../CalendarStyle.css";
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 
 const locales = {
@@ -79,18 +81,20 @@ function CALENDAR() {
 
     return (
         <div className="Calendar">
+            <Navbar/>
             <h1>Terminarz</h1>
             <h2>Dodaj nową rezerwację</h2>
             <div>
                 <input type="text" placeholder="Dodaj nazwę" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
                 <DatePicker placeholderText="Dzień" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-                <DatePicker placeholderText="Godzina rozpoczęcia" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
+                <TimePicker placeholderText="Godzina rozpoczęcia" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
             
                 <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
                     Dodaj
                 </button>
             </div>
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
+        <Footer/>
         </div>
     );
 }
