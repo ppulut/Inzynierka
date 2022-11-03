@@ -1,7 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import TextField from "@mui/material/TextField";
+//import TextField from "@mui/material/TextField";
 //import MenuItem from "@mui/material/MenuItem";
 //import moment from 'moment';
 import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
@@ -19,9 +19,8 @@ import {
   EditRecurrenceMenu,
   DragDropProvider,
 } from "@devexpress/dx-react-scheduler-material-ui";
-
-import { owners } from '../demo-data/tasks';
-import { appointments, resourcesData } from '../demo-data/resources';
+import { owners } from "../demo-data/tasks";
+import { appointments, resourcesData } from "../demo-data/resources";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -96,26 +95,22 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
+
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
         data: appointments,
+        resources: [
+            {
+              fieldName: "usługa",
+              title: "Usługa",
+              instances: owners,
+              allowMultiple: true
+            }
+          ],
         currentDate: "2022-11-3",
         locale: "pl-PL",
-        resources: [
-          {
-            fieldName: 'roomId',
-            title: 'Room',
-            instances: resourcesData,
-          },
-          {
-            fieldName: 'members',
-            title: 'Members',
-            instances: owners,
-            allowMultiple: true,
-          },
-        ],
       };
     
       this.commitChanges = this.commitChanges.bind(this);

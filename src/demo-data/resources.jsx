@@ -73,7 +73,7 @@ export const appointments = [
 
 export const resourcesData = [
   {
-    text: 'Room 101',
+    text: 'DAwd',
     id: 1,
     color: amber,
   }, {

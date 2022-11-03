@@ -14,10 +14,16 @@ public class ModReservation {
     @Id
     private Long product_id;
 
-    @Column(name = "Data")
-    private String data;
+    @Column(name = "Title")
+    private String title;
 
-    @Column(name = "Hour")
-    private String hour;
+    @Column(name = "StartDate")
+    private String startDate;
+
+    @Column(name = "EndDate")
+    private String endDate;
+
+    @Column(name = "Color")
+    private String color;
 
 }
