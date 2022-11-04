@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ height: "50%", width:"100%" })}
 `;
 
 const Arrow = styled.div`
@@ -30,6 +30,8 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+
+  
 `;
 
 const Wrapper = styled.div`

@@ -223,16 +223,36 @@ export const priorities = [
 
 export const owners = [
   {
-    text: 'Hybryda',
+    text: 'Manicure klasyczny',
     id: 1,
     color: '#7E57C2',
   }, {
-    text: 'Wzory',
+    text: 'Manicure japoński',
     id: 2,
     color: '#FF7043',
   }, {
-    text: 'Żele',
+    text: 'Manicure hybrydowy',
     id: 3,
+    color: '#E91E63',
+  }, 
+  {
+    text: 'Manicure żelowy',
+    id: 4,
+    color: '#E91E63',
+  }, 
+  {
+    text: 'Parafinowanie dłoni',
+    id: 5,
+    color: '#E91E63',
+  }, 
+  {
+    text: 'Usunięcie stylizacji',
+    id: 6,
+    color: '#E91E63',
+  }, 
+  {
+    text: 'Geometria i regulacja brwi',
+    id: 7,
     color: '#E91E63',
   }, 
 ];

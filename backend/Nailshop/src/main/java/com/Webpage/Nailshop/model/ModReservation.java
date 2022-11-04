@@ -22,6 +22,6 @@ public class ModReservation {
 
     @Column(name = "EndDate")
     private String endDate;
-    
+
 
 }
