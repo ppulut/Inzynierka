@@ -207,6 +207,12 @@ export const tasks = [
     startDate: '2018-05-03T11:45',
     endDate: '2018-05-03T13:30',
   },
+  {
+    title: 'Review Changes to Health Insurance Coverage',
+    priorityId: 1,
+    startDate: '2022-11-053T11:45',
+    endDate: '2022-11-053T11:45',
+  },
 ];
 
 export const priorities = [

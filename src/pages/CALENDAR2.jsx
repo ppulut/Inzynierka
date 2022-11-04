@@ -109,7 +109,7 @@ export default class Demo extends React.PureComponent {
               allowMultiple: true
             }
           ],
-        currentDate: "2022-11-3",
+        currentDate: "2022-11-03",
         locale: "pl-PL",
       };
     

@@ -22,8 +22,6 @@ public class ModReservation {
 
     @Column(name = "EndDate")
     private String endDate;
-
-    @Column(name = "Color")
-    private String color;
+    
 
 }

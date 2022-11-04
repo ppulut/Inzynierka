@@ -99,4 +99,40 @@ export const sliderItems = [
       price:"24 zł",
     },
 
-  ]
+  ];
+
+  export const reservations = [
+    {
+      id: 0,
+      title: 'Watercolor Landscape',
+      startDate: new Date(2017, 4, 1, 9, 30),
+      endDate: new Date(2017, 4, 1, 11),
+    }, {
+      id: 1,
+      title: 'Oil Painting for Beginners',
+      startDate: new Date(2022, 4, 1, 9, 30),
+      endDate: new Date(2022, 4, 2, 11),
+    }, {
+      id: 2,
+      title: "AAAAAAAAAAAA",
+      startDate: (2022, 10, 1, 9, 30),
+      endDate: (2022, 10, 1, 11),
+    },
+    
+  ];
+
+  export const owners = [
+    {
+      text: 'Hybryda',
+      id: 1,
+      color: '#7E57C2',
+    }, {
+      text: 'Wzory',
+      id: 2,
+      color: '#FF7043',
+    }, {
+      text: 'Żele',
+      id: 3,
+      color: '#E91E63',
+    }, 
+  ];
