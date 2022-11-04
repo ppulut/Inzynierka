@@ -90,11 +90,11 @@ const Login = () => {
     <Wrapper>
         <Title>ZALOGUJ SIĘ</Title>
         <Form>
-            <Input placeholder="Login"
+            <Input placeholder="Login" required 
             value={login}
             onChange={(e)=>setLogin(e.target.value)}
             />
-            <Input type="password" placeholder="Hasło"
+            <Input type="password" placeholder="Hasło" required 
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />

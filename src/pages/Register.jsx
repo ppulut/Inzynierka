@@ -95,23 +95,23 @@ const Register = () => {
       <Wrapper>
           <Title>UTWÓRZ KOTNO</Title>
           <Form>
-              <Input placeholder="Imię"
+              <Input placeholder="Imię" required 
                             value={name}
                             onChange={(e)=>setName(e.target.value)}
               />
-              <Input placeholder="Nazwisko"
+              <Input placeholder="Nazwisko" required 
                             value={surname}
                             onChange={(e)=>setSurname(e.target.value)}
               />
-              <Input placeholder="Login"
+              <Input placeholder="Login" required 
                             value={login}
                             onChange={(e)=>setLogin(e.target.value)}
               />
-              <Input type="password" placeholder="Hasło"
+              <Input type="password" placeholder="Hasło" required 
                             value={password}
                             onChange={(e)=>setPassword(e.target.value)}
               />
-              <Input type="password" placeholder="Potwierdź hasło"
+              <Input type="password" placeholder="Potwierdź hasło" required 
                             value={repassword}
                             onChange={(e)=>setRePassword(e.target.value)}
               />

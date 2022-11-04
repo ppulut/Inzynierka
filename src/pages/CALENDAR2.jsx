@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React, {useEffect} from "react";
 import emailjs from "emailjs-com";
 //import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -118,7 +118,6 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
-
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -177,16 +176,16 @@ export default class Demo extends React.PureComponent {
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="Imię" name="name"/>
+                            <input type="text" className="form-control" placeholder="Imię" name="name" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email" className="form-control" placeholder="Email" name="email"/>
+                            <input type="email" className="form-control" placeholder="Email" name="email" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject"/>
+                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="datetime-local" className="form-control" placeholder="Data" name="subject"/>
+                            <input type="datetime-local" className="form-control" placeholder="Data" name="subject" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <textarea className="form-control" id="" cols="30" rows="8" placeholder="Dodatkowe uwagi" name="message"></textarea>
@@ -228,4 +227,5 @@ export default class Demo extends React.PureComponent {
       </div>
     );
   }
+  
 }

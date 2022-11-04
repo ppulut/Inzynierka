@@ -26,16 +26,16 @@ const ContactUs = () => {
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="Imię" name="name"/>
+                            <input type="text" className="form-control" placeholder="Imię" name="name" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email" className="form-control" placeholder="Email" name="email"/>
+                            <input type="email" className="form-control" placeholder="Email" name="email" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="text" className="form-control" placeholder="Temat" name="subject"/>
+                            <input type="text" className="form-control" placeholder="Temat" name="subject" required />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Twoja wiadomość" name="message"></textarea>
+                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Twoja wiadomość" name="message" required ></textarea>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
                             <input type="submit" className="btn btn-info" value="Wyślij"></input>
