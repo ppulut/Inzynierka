@@ -29,7 +29,7 @@ margin: 5px;
 height: 70vh;
 width:100%;
 position: relative; 
-${mobile({ height: "20vh" })}
+
 
 transform: translate(0%);
 transition: 0.3s ease-out;
@@ -48,13 +48,15 @@ const Image = styled.img`
 width: 100%;
 height: 100%;
 object-fit: cover;
+${mobile({ height: "40vh", width:"100%" })}
+
 `
 
 
 const Tytul = styled.h1`
 color: white;
 margin-bottom: 5px;
-
+${mobile({ height: "40vh", width:"100%" })}
 `
 
 const Button = styled.button`

@@ -2,7 +2,7 @@ import React from 'react'
 import '../Gallery.css';
 import styled from 'styled-components'
 import Footer from './Footer';
-
+import { mobile } from "../responsive";
 
 const Nav = styled.h1`
 font-size: 36px;
@@ -10,6 +10,7 @@ color: rgb(26, 26, 26);
 font-weight: bold;
 padding:30px;
 margin: 4px 12px 8px
+${mobile({ visibility:"hidden" })}
 `
 
 const Container = styled.div`
@@ -19,6 +20,7 @@ height: 70vh;
 width:100%;
 position: relative; 
 left:110px;
+${mobile({ width:"device-width", scale:"1.2" })}
   `
 
 

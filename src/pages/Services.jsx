@@ -9,7 +9,7 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
 ${mobile({ textAlign: "center" })}
-${mobile({ width: "80%" })}
+${mobile({ width:"100%", scale:"1" })}
 
 `
 const Nav = styled.h1`

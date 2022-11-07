@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { mobile } from '../responsive';
 const Container = styled.div`
   height: 30px;
   background-color: black;
@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content: center;
   font-size: 18px;
   font-weight: bold;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Announcement = () => {
