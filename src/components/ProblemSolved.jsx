@@ -9,7 +9,7 @@ import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 const Panel = styled.div`
   width: 400px;
   text-align: left;
-  padding: 0.5rem;
+  padding: 0.5rem; 
 `
 
 const PanelHeading = styled.div`
