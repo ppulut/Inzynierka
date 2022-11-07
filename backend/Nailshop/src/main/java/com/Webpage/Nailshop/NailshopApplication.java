@@ -38,6 +38,9 @@ public class NailshopApplication implements CommandLineRunner {
 	@Autowired
 	public Reservation reservation;
 
+	@Autowired
+	public ProblemsRepository problemsRepository;
+
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -133,17 +136,29 @@ public class NailshopApplication implements CommandLineRunner {
 		category2.setTitle("OPIS USŁUG");
 		categoryRepository.save(category2);
 
-		ModCategory category3 = new ModCategory();
+		/*ModCategory category3 = new ModCategory();
 		category3.setLink("ProductsPage");
 		category3.setImg("https://media.istockphoto.com/photos/young-beautiful-asian-woman-using-smart-phone-and-credit-card-for-picture-id1035462566?k=20&m=1035462566&s=612x612&w=0&h=zMmTLkh9N2Y52sEUPC25QwNytydwXuDyl64XnfmpKdg=");
 		category3.setTitle("OFERTA");
-		categoryRepository.save(category3);
+		categoryRepository.save(category3);*/
 
 		ModCategory category4 = new ModCategory();
-		category4.setLink("Gallery");
-		category4.setImg("https://media.istockphoto.com/photos/girl-with-the-nail-in-hand-on-white-background-picture-id898398096?k=20&m=898398096&s=612x612&w=0&h=oyGe7JZq0tb0Jtyb2TaB3an0Cuxmt399CpC2VZ5tCdE=");
-		category4.setTitle("GALERIA");
+		category4.setLink("PROBLEMS");
+		category4.setImg("https://www.incimages.com/uploaded_files/image/1920x1080/getty_494278234_175211.jpg");
+		category4.setTitle("TWÓJ PROBLEM");
 		categoryRepository.save(category4);
+
+		ModCategory category5 = new ModCategory();
+		category5.setLink("Gallery");
+		category5.setImg("https://weddingdream.b-cdn.net/wp-content/uploads/2020/07/Projekt-bez-tytulu-2-1024x683.jpg");
+		category5.setTitle("BON PODARUNKOWY");
+		categoryRepository.save(category5);
+
+		ModCategory category6 = new ModCategory();
+		category6.setLink("Gallery");
+		category6.setImg("https://media.istockphoto.com/photos/girl-with-the-nail-in-hand-on-white-background-picture-id898398096?k=20&m=898398096&s=612x612&w=0&h=oyGe7JZq0tb0Jtyb2TaB3an0Cuxmt399CpC2VZ5tCdE=");
+		category6.setTitle("GALERIA");
+		categoryRepository.save(category6);
 
 
 		ModPrice price1 = new ModPrice();
@@ -301,6 +316,47 @@ public class NailshopApplication implements CommandLineRunner {
 		reservation1.setStartDate("2022, 11, 5, 11, 30");
 		reservation1.setEndDate("2022, 11, 5, 12, 30");
 		reservation.save(reservation1);
+
+
+		ModProblems problems1 = new ModProblems();
+		problems1.setTitle("Sucha skóra");
+		problems1.setOpis("awfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e5t e5 5etgrgtedgrgreg");
+		problemsRepository.save(problems1);
+
+		ModProblems problems2 = new ModProblems();
+		problems2.setTitle("Tłusta skóra");
+		problems2.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 esefwefwfsefseferfsef");
+		problemsRepository.save(problems2);
+
+		ModProblems problems3 = new ModProblems();
+		problems3.setTitle("Zmarszczki");
+		problems3.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems3);
+
+		ModProblems problems4 = new ModProblems();
+		problems4.setTitle("Cienie pod oczami");
+		problems4.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems4);
+
+		ModProblems problems5 = new ModProblems();
+		problems5.setTitle("Cienie pod oczami");
+		problems5.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems5);
+
+		ModProblems problems6 = new ModProblems();
+		problems6.setTitle("Cienie pod oczami");
+		problems6.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems6);
+
+		ModProblems problems7 = new ModProblems();
+		problems7.setTitle("Cienie pod oczami");
+		problems7.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems7);
+
+		ModProblems problems8 = new ModProblems();
+		problems8.setTitle("Cienie pod oczami");
+		problems8.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problemsRepository.save(problems8);
 
 	}
 }

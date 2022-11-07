@@ -36,6 +36,10 @@ class DataServices{
         return axios.get(URL + "/services/AllServices")
     }
 
+    getProblems(){
+        return axios.get(URL + "/problems/AllProblems")
+    }
+
     success(message, options) {
         alert({ ...options, type: alertType.success, message });
     }

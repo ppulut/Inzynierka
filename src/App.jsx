@@ -8,9 +8,9 @@ import PriceList from "./pages/PriceList";
 import Gallery from "./pages/Gallery";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
-import Calendar from "./pages/CALENDAR";
 import Calendar2 from "./pages/CALENDAR2";
-import Calendar3 from "./pages/CALENDAR3";
+import PROBLEMS from "./pages/PROBLEMS";
+
 
 
 const App = () => {
@@ -26,9 +26,8 @@ const App = () => {
       <Route path="/Gallery" element={<Gallery/>}/>
       <Route path="/Services" element={<Services/>}/>
       <Route path="/ContactUs" element={<ContactUs/>}/>
-      <Route path="/CALENDAR" element={<Calendar/>}/>
       <Route path="/CALENDAR2" element={<Calendar2/>}/>
-      <Route path="/CALENDAR3" element={<Calendar3/>}/>
+      <Route path="/PROBLEMS" element={<PROBLEMS/>}/>
       </Routes>
     </BrowserRouter>
   );
