@@ -53,7 +53,7 @@ const Newsletter = () => {
       <Title>Newsletter</Title>
       <Desc>Otrzymuj informacje o nowej ofercie!</Desc>
       <InputContainer>
-        <Input placeholder="Twój email" />
+        <Input placeholder="Twój email" required/>
         <Button>
           <Send/>
         </Button>

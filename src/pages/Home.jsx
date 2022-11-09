@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
 import Slider from '../components/Slider'
 import Announcement from '../components/Announcement'
+import NEWS from '../components/NEWS'
 
 
 const Home = () => {
@@ -14,7 +15,8 @@ const Home = () => {
         <Navbar/> 
         <Slider/>  
         <Categories/> 
-        <Newsletter/>
+        
+        <NEWS/>
         <Footer/>
     </div>
   )

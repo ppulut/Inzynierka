@@ -10,7 +10,7 @@ import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Calendar2 from "./pages/CALENDAR2";
 import PROBLEMS from "./pages/PROBLEMS";
-
+import NEWS from "./components/NEWS";
 
 
 const App = () => {
@@ -28,6 +28,7 @@ const App = () => {
       <Route path="/ContactUs" element={<ContactUs/>}/>
       <Route path="/CALENDAR2" element={<Calendar2/>}/>
       <Route path="/PROBLEMS" element={<PROBLEMS/>}/>
+      <Route path="/NEWS" element={<NEWS/>}/>
       </Routes>
     </BrowserRouter>
   );
