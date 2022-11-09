@@ -92,7 +92,19 @@ margin-left: 20px;
 ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `
 
-
+/* Logowanie i rejestraca
+        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
+                 <Menu>Rejestracja</Menu>
+                </Link>
+        
+              <AccessibilityNewIcon color="action" />
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
+              <Menu>Logowanie</Menu>
+                  </Link>
+              <Badge color="primary">
+      <LoginIcon color="action" />
+              </Badge>
+              */
 
 
 const Navbar = () => {
@@ -108,17 +120,6 @@ const Navbar = () => {
             </Lewo>
             <Center><Logo>Nails</Logo></Center>
             <Prawo>
-               <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Register"}>
-                 <Menu>Rejestracja</Menu>
-                </Link>
-        
-              <AccessibilityNewIcon color="action" />
-              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Login"}>
-              <Menu>Logowanie</Menu>
-                  </Link>
-              <Badge color="primary">
-      <LoginIcon color="action" />
-              </Badge>
             </Prawo>
         </Wrapper>
         </Container>

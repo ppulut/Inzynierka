@@ -7,19 +7,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Panel = styled.div`
-  width: 400px;
+  width: 80%;
   text-align: left;
-  padding: 0.5rem; 
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 0px 0px 0;
 `
 
 const PanelHeading = styled.div`
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #f2edf2;
+  color: #000000;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 17px 30px 17px 0;
+  border-bottom: 1px solid #e1e1e1;
   cursor: pointer;
+  font-size:20px;
+  font-weight: bold;
 `
 
 const PanelContent = styled(animated.div)`
@@ -29,6 +35,7 @@ const PanelContent = styled(animated.div)`
   color: #000000;
   overflow: hidden;
   transition: height ease 0.2s;
+
 `
 
 const PanelContentInner = styled.div`

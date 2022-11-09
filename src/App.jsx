@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Calendar2 from "./pages/CALENDAR2";
 import PROBLEMS from "./pages/PROBLEMS";
+import Bon from "./pages/Bon";
 import NEWS from "./components/NEWS";
 
 
@@ -29,6 +30,7 @@ const App = () => {
       <Route path="/CALENDAR2" element={<Calendar2/>}/>
       <Route path="/PROBLEMS" element={<PROBLEMS/>}/>
       <Route path="/NEWS" element={<NEWS/>}/>
+      <Route path="/Bon" element={<Bon/>}/>
       </Routes>
     </BrowserRouter>
   );
