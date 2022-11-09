@@ -29,6 +29,12 @@ margin-right: auto;
 margin-left: auto;
 position: relative;
 opacity: 0.7;
+transition: 0.5s ease-out;
+
+&:hover { 
+  opacity:1;
+  transition: 0.5s ease-out;
+}
 `;
 
 const Info = styled.div`
