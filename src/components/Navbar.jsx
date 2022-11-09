@@ -11,6 +11,7 @@ const Container = styled.div`
     height: 90px;
     background-color: rgb(248,247,243);
     ${mobile({ width:"device-width", scale:"1" })}
+    
 `;
 
 const Wrapper = styled.div`

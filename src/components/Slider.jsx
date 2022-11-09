@@ -11,6 +11,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${mobile({ height: "50%", width:"100%" })}
+  
 `;
 
 const Arrow = styled.div`

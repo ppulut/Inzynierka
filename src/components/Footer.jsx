@@ -7,6 +7,8 @@ import { mobile } from '../responsive';
 const Container = styled.div`
 display: flex;
 ${mobile({ flexDirection: "column" })}
+background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148908629.jpg?w=2000);
+
 `
 
 const Lewo = styled.div`
