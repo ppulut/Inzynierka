@@ -28,6 +28,7 @@ const CustomForm = ({ subscribe, status, message, onValidated  }) => {
         placeholder="Twój email"
         ref={node => (email = node)}
         type="email"
+        required
         />
         <Button onClick={submit}>
         Wyślij <Send/>
