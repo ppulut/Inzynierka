@@ -1,4 +1,4 @@
-import  React, {useEffect} from "react";
+import  React, {useState} from "react";
 import emailjs from "emailjs-com";
 //import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -13,21 +13,22 @@ import {
   Toolbar,
   DateNavigator,
   Appointments,
-  AllDayPanel,
-  Resources,
-  MonthView,
-  AppointmentTooltip,
-  AppointmentForm,
-  EditRecurrenceMenu,
-  DragDropProvider,
 } from "@devexpress/dx-react-scheduler-material-ui";
-import { owners } from "../demo-data/tasks";
-import { appointments, resourcesData } from "../demo-data/resources";
+import { appointments } from '../demo-data/appointments';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const PREFIX = "Demo";
 
+const Button = styled.button`
+width: 40%;
+margin: 20px 10px 0px 0px;
+padding: 10px;
+border: none;
+border-radius:50px;
+background-color: lightpink;
+color: white;
+cursor: pointer;
+`
 
 function sendEmail(e) {
   e.preventDefault();
@@ -41,6 +42,7 @@ emailjs.sendForm('newsMail', 'newsletter', e.target, 'QpiP834qyGnlzJa9L')
   e.target.reset()
 }
 
+
 const Nav = styled.h1`
 font-size: 36px;
 color: rgb(26, 26, 26);
@@ -48,23 +50,6 @@ font-weight: bold;
 padding:30px;
 margin: 4px 12px 8px;
 `
-
-const classes = {
-  container: `${PREFIX}-container`,
-  text: `${PREFIX}-text`
-};
-
-const StyledDiv = styled("div")(({ theme }) => ({
-  [`&.${classes.container}`]: {
-    display: "flex",
-    marginBottom: theme.spacing(2),
-    justifyContent: "flex-end"
-  },
-  [`& .${classes.text}`]: {
-    ...theme.typography.h6,
-    marginRight: theme.spacing(2)
-  }
-}));
 
 const allDayLocalizationMessages = {
   "pl-PL": {
@@ -75,7 +60,7 @@ const allDayLocalizationMessages = {
   }*/
 };
 
-const getAllDayMessages = (locale) => allDayLocalizationMessages[locale];
+
 /*
 const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
     [`&.${classes.dayScaleCell}`]: {
@@ -118,57 +103,40 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
-export default class Demo extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-        data: appointments,
-        resources: [
-            {
-              fieldName: "usługa",
-              title: "Usługa",
-              instances: owners,
-              allowMultiple: true
-            }
-          ],
-        currentDate: "2022-11-03",
-        locale: "pl-PL",
-      };
-    
-      this.commitChanges = this.commitChanges.bind(this);
-    }
-    
-    commitChanges({ added, changed, deleted }) {
-      this.setState((state) => {
-        let { data } = state;
-        if (added) {
-          const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
-          data = [...data, { id: startingAddedId, ...added }];
-        }
-        if (changed) {
-          data = data.map(appointment => (
-            changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment));
-        }
-        if (deleted !== undefined) {
-          data = data.filter(appointment => appointment.id !== deleted);
-        }
-        return { data };
-      });
+const data = appointments;
+const currentDate = '2022-11-10';
+const locale = "pl-PL";
 
 
-    this.changeLocale = (event) =>
-      this.setState({ locale: event.target.value });
-  }
+const CALENDAR2 = () => {
 
-  
+const[name,setName]=useState('')
+const[email,setEmail]=useState('')
+const[phone,setPhone]=useState('')
+const[startDate,setStartDate]=useState('')
+const[endDate,setEndDate]=useState('')
+const[desc,setDesc]=useState('')
+const [show, setShow] = useState(false);
 
-  render() {
-    const { data, currentDate, locale, resources } = this.state;
-        /*<LocaleSwitcher
-          currentLocale={locale}
-          onLocaleChange={this.changeLocale}
-        />*/
-    return (
+const handleClick=(e)=>{
+  e.preventDefault()
+  const user={name, email, phone, startDate, endDate, desc}
+  console.log(user)
+
+fetch("http://localhost:8080/reservations/add",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(user)
+
+}).then((confirm)=>{
+  console.log("New reservation added")
+  setShow(true);
+})
+}
+
+
+
+  return (
       <div>
         <Navbar/>
         <Nav>Wybierz interesujący Cię termin spośród dostępnych poniżej</Nav>
@@ -176,56 +144,64 @@ export default class Demo extends React.PureComponent {
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="Imię" name="name" required />
+                            <input type="text" className="form-control" placeholder="Imię" name="name" required  
+                            value={name}
+                            onChange={(e)=>setName(e.target.value)} />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email" className="form-control" placeholder="Email" name="email" required />
+                            <input type="email" className="form-control" placeholder="Email" name="email" required  
+                            value={email}
+                            onChange={(e)=>setEmail(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required />
+                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
+                             value={phone}
+                             onChange={(e)=>setPhone(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="datetime-local" className="form-control" placeholder="Data" name="subject" required />
+                            <input type="datetime-local" className="form-control" placeholder="Data rozpoczęcia" name="subject" required 
+                             value={startDate}
+                             onChange={(e)=>setStartDate(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Dodatkowe uwagi" name="message"></textarea>
+                            <input type="datetime-local" className="form-control" placeholder="Data zakończenia" name="subject" required 
+                             value={endDate}
+                             onChange={(e)=>setEndDate(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Dodatkowe uwagi" name="message"
+                            value={desc}
+                            onChange={(e)=>setDesc(e.target.value)}></textarea>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
-                            <input type="submit" className="btn btn-info" value="Wyślij"></input>
+                        <Button variant="success" onClick={handleClick}>Wyślij</Button>
                         </div>
                     </div>
                 </form>
             </div>
-    <Paper>
-          <Scheduler data={data} locale={locale} height={660}>
-            <ViewState defaultCurrentDate={currentDate} />
-            <WeekView startDayHour={9} endDayHour={19} />
+
+
+        <Paper>
+        <Scheduler
+          data={data}
+          locale={locale}
+          height={660}
+        >
+          <ViewState defaultCurrentDate={currentDate}/>
             <Toolbar />
             <DateNavigator />
-            <AllDayPanel messages={getAllDayMessages(locale)} />
-
-            <EditingState
-            onCommitChanges={this.commitChanges}
+          <WeekView
+            startDayHour={9}
+            endDayHour={19}
           />
-          <EditRecurrenceMenu />
-
-          <MonthView />
           <Appointments />
-          <AppointmentTooltip
-            showOpenButton
-          />
-          <AppointmentForm />
-
-          <Resources
-            data={resources}
-            mainResourceName="roomId"
-          />
-          <DragDropProvider />
-          </Scheduler>
-        </Paper>
+        </Scheduler>
+      </Paper>
         <Footer/>
       </div>
     );
   }
   
-}
+
+
+export default CALENDAR2

@@ -2,7 +2,7 @@ import {
   pink, purple, teal, amber, deepOrange,
 } from '@mui/material/colors';
 
-export const appointments = [
+export const appointment = [
   {
     id: 0,
     title: 'Watercolor Landscape',

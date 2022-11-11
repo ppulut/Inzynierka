@@ -1,13 +1,17 @@
-.md-custom-range-view-controls {
-    display: flex;
-    flex: 1 0 auto;
-    justify-content: end;
-    align-items: center;
+.md-calendar-booking .mbsc-calendar-text {
+    text-align: center;
 }
 
-.mbsc-material .mbsc-calendar-title {
-    font-size: 1.428572em;
-    font-weight: 400;
-    text-transform: none;
-    line-height: 1.4em;
+.md-calendar-booking .booking-datetime .mbsc-datepicker-tab-calendar {
+    flex: 1 1 0;
+    min-width: 300px;
+}
+
+.md-calendar-booking .mbsc-timegrid-item {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.md-calendar-booking .mbsc-timegrid-container {
+    top: 30px;
 }
