@@ -23,8 +23,8 @@ public class ModReservation {
 
     private Long product_id;
 
-    @Column(name = "Name")
-    private String name;
+    @Column(name = "Title")
+    private String title;
 
     @Column(name = "Email")
     private String email;

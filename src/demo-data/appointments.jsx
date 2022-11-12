@@ -2,8 +2,9 @@ export const appointments = [
   {
     title: 'ZAZA',
     name: 'Izabela',
-    startDate: new Date(2022, 10, 12, 10, 30),
-    endDate: new Date(2022, 10, 12, 11, 30),
+    startDate: "2022-11-12 10:00",
+    endDate:  "2022-11-12 12:00",
     id: 0,
   }, 
+  
 ]

@@ -103,7 +103,6 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
-const data = appointments;
 const currentDate = '2022-11-10';
 const locale = "pl-PL";
 
@@ -123,7 +122,6 @@ const[desc,setDesc]=useState('')
 const [show, setShow] = useState(false);
 
 const handleClick=(e)=>{
-  e.preventDefault()
   const user={name, email, phone, startDate, endDate, desc}
   console.log(user)
 
@@ -138,6 +136,7 @@ fetch("http://localhost:8080/reservations/add",{
 })
 }
 
+/*
 const handleClick2=(e)=>{
   e.preventDefault()
   const user={name, email, phone, startDate, endDate, desc}
@@ -159,14 +158,13 @@ fetch("http://localhost:8080/reservations/Allreservations",{
     });
 })
 }
+*/
 
-
-
-const [post, setPost] = useState([]);
+const[data,setData]=useState([])
 
   useEffect(() => {
     DataServices.getAllReservations().then((response) => {
-       setPost(response.data);
+      setData(response.data);
      });
    }, []);
 
@@ -179,7 +177,7 @@ const [post, setPost] = useState([]);
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="Imię" name="name" required  
+                            <input type="text" className="form-control" placeholder="Nazwa usługi" name="name" required  
                             value={name}
                             onChange={(e)=>setName(e.target.value)} />
                         </div>
@@ -209,7 +207,12 @@ const [post, setPost] = useState([]);
                             onChange={(e)=>setDesc(e.target.value)}></textarea>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
-                        <Button variant="success" onClick={handleClick}>Wyślij</Button>
+                        <Button type="submit" variant="success" 
+                        onClick={() => {
+                        handleClick()
+                        sendEmail()
+                        }}>Wyślij
+                        </Button>
                         </div>
                     </div>
                 </form>
@@ -218,9 +221,8 @@ const [post, setPost] = useState([]);
 
         <Paper>
 
-{post.map((product) => (
+
         <Scheduler
-        item={product} key={product.id}
           data={data}
           locale={locale}
           height={660}
@@ -228,15 +230,12 @@ const [post, setPost] = useState([]);
           <ViewState defaultCurrentDate={currentDate}/>
             <Toolbar />
             <DateNavigator />
-            <div className="col-8 pt-3 mx-auto">
-                        <Button variant="success" onClick={handleClick2}>Odśwież kalendarz</Button>
-                        </div>
           <WeekView
             startDayHour={9}
             endDayHour={19}
           />
           <Appointments />
-        </Scheduler> ))}
+        </Scheduler> 
       </Paper>
         <Footer/>
       </div>

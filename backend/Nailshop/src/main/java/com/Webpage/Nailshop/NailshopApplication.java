@@ -312,13 +312,22 @@ public class NailshopApplication implements CommandLineRunner {
 		serviceRepository.save(service12);
 
 		ModReservation reservation1 = new ModReservation();
-		reservation1.setName("Manicure hybrydowy");
+		reservation1.setTitle("Manicure hybrydowy");
 		reservation1.setEmail("xyz@wp.pl");
 		reservation1.setPhone("431 132 421");
-		reservation1.setStartDate("2022, 10, 11, 10, 30");
-		reservation1.setEndDate("2022, 10, 11, 12, 30");
+		reservation1.setStartDate("2022-11-10T13:05");
+		reservation1.setEndDate("2022-11-10T15:05");
 		reservation1.setDescription("hahahfe");
 		reservation.save(reservation1);
+
+		ModReservation reservation2 = new ModReservation();
+		reservation2.setTitle("Manicure");
+		reservation2.setEmail("xyz@wp.pl");
+		reservation2.setPhone("431 132 421");
+		reservation2.setStartDate("2022-11-08T11:00");
+		reservation2.setEndDate("2022-11-08T15:00");
+		reservation2.setDescription("hahahfe");
+		reservation.save(reservation2);
 
 
 		ModProblems problems1 = new ModProblems();
