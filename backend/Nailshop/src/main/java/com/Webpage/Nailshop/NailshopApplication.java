@@ -315,8 +315,8 @@ public class NailshopApplication implements CommandLineRunner {
 		reservation1.setName("Manicure hybrydowy");
 		reservation1.setEmail("xyz@wp.pl");
 		reservation1.setPhone("431 132 421");
-		reservation1.setStartDate("2022, 10, 12, 10, 30");
-		reservation1.setEndDate("2022, 10, 12, 12, 30");
+		reservation1.setStartDate("2022, 10, 11, 10, 30");
+		reservation1.setEndDate("2022, 10, 11, 12, 30");
 		reservation1.setDescription("hahahfe");
 		reservation.save(reservation1);
 

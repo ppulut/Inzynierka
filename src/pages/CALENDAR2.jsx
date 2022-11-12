@@ -1,4 +1,4 @@
-import  React, {useState} from "react";
+import  React, {useState, useEffect} from "react";
 import emailjs from "emailjs-com";
 //import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -17,7 +17,7 @@ import {
 import { appointments } from '../demo-data/appointments';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import DataServices from '../services/DataServices'
 
 const Button = styled.button`
 width: 40%;
@@ -110,6 +110,10 @@ const locale = "pl-PL";
 
 const CALENDAR2 = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
 const[name,setName]=useState('')
 const[email,setEmail]=useState('')
 const[phone,setPhone]=useState('')
@@ -134,6 +138,37 @@ fetch("http://localhost:8080/reservations/add",{
 })
 }
 
+const handleClick2=(e)=>{
+  e.preventDefault()
+  const user={name, email, phone, startDate, endDate, desc}
+  console.log(user)
+
+  
+
+fetch("http://localhost:8080/reservations/Allreservations",{
+    method:"GET",
+    headers:{"Content-Type":"application/json"},
+    
+   
+
+}).then((res) => res.json())
+.then((json) => {
+    this.setState({
+        items: json,
+        DataisLoaded: true
+    });
+})
+}
+
+
+
+const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    DataServices.getAllReservations().then((response) => {
+       setPost(response.data);
+     });
+   }, []);
 
 
   return (
@@ -182,7 +217,10 @@ fetch("http://localhost:8080/reservations/add",{
 
 
         <Paper>
+
+{post.map((product) => (
         <Scheduler
+        item={product} key={product.id}
           data={data}
           locale={locale}
           height={660}
@@ -190,12 +228,15 @@ fetch("http://localhost:8080/reservations/add",{
           <ViewState defaultCurrentDate={currentDate}/>
             <Toolbar />
             <DateNavigator />
+            <div className="col-8 pt-3 mx-auto">
+                        <Button variant="success" onClick={handleClick2}>Odśwież kalendarz</Button>
+                        </div>
           <WeekView
             startDayHour={9}
             endDayHour={19}
           />
           <Appointments />
-        </Scheduler>
+        </Scheduler> ))}
       </Paper>
         <Footer/>
       </div>
