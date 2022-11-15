@@ -103,7 +103,7 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
-const currentDate = '2022-11-10';
+const currentDate = '2022-11-16';
 const locale = "pl-PL";
 
 

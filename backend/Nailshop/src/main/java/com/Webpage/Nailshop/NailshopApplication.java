@@ -315,59 +315,68 @@ public class NailshopApplication implements CommandLineRunner {
 		reservation1.setTitle("Manicure hybrydowy");
 		reservation1.setEmail("xyz@wp.pl");
 		reservation1.setPhone("431 132 421");
-		reservation1.setStartDate("2022-11-10T13:05");
-		reservation1.setEndDate("2022-11-10T15:05");
+		reservation1.setStartDate("2022-11-14T13:05");
+		reservation1.setEndDate("2022-11-14T15:05");
 		reservation1.setDescription("hahahfe");
 		reservation.save(reservation1);
 
 		ModReservation reservation2 = new ModReservation();
-		reservation2.setTitle("Manicure");
+		reservation2.setTitle("Manicure japoński");
 		reservation2.setEmail("xyz@wp.pl");
 		reservation2.setPhone("431 132 421");
-		reservation2.setStartDate("2022-11-08T11:00");
-		reservation2.setEndDate("2022-11-08T15:00");
+		reservation2.setStartDate("2022-11-15T11:00");
+		reservation2.setEndDate("2022-11-15T15:00");
 		reservation2.setDescription("hahahfe");
 		reservation.save(reservation2);
+
+		ModReservation reservation3 = new ModReservation();
+		reservation3.setTitle("Geometria brwi");
+		reservation3.setEmail("xyz@wp.pl");
+		reservation3.setPhone("431 132 421");
+		reservation3.setStartDate("2022-11-18T09:00");
+		reservation3.setEndDate("2022-11-18T10:00");
+		reservation3.setDescription("hahahfe");
+		reservation.save(reservation3);
 
 
 		ModProblems problems1 = new ModProblems();
 		problems1.setTitle("Sucha skóra");
-		problems1.setOpis("awfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e5t e5 5etgrgtedgrgreg");
+		problems1.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems1);
 
 		ModProblems problems2 = new ModProblems();
 		problems2.setTitle("Tłusta skóra");
-		problems2.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 esefwefwfsefseferfsef");
+		problems2.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems2);
 
 		ModProblems problems3 = new ModProblems();
 		problems3.setTitle("Zmarszczki");
-		problems3.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems3.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems3);
 
 		ModProblems problems4 = new ModProblems();
 		problems4.setTitle("Cienie pod oczami");
-		problems4.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems4.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems4);
 
 		ModProblems problems5 = new ModProblems();
-		problems5.setTitle("Cienie pod oczami");
-		problems5.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems5.setTitle("Wrastający paznokieć");
+		problems5.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems5);
 
 		ModProblems problems6 = new ModProblems();
-		problems6.setTitle("Cienie pod oczami");
-		problems6.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems6.setTitle("Elastyczność skóry");
+		problems6.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems6);
 
 		ModProblems problems7 = new ModProblems();
-		problems7.setTitle("Cienie pod oczami");
-		problems7.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems7.setTitle("Łamliwe paznokcie");
+		problems7.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems7);
 
 		ModProblems problems8 = new ModProblems();
-		problems8.setTitle("Cienie pod oczami");
-		problems8.setOpis("wfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 ewfaegfesgfsfewgrwegtee55etgersgrsgrsegregergedrtg5 e");
+		problems8.setTitle("Dobór koloru");
+		problems8.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems8);
 
 	}

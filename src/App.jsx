@@ -1,7 +1,7 @@
 import Home from "./pages/Home"
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDet from "./pages/ProductDet";
 import PriceList from "./pages/PriceList";
@@ -16,7 +16,7 @@ import NEWS from "./components/NEWS";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route path="/Register" element={<Register/>}/>
@@ -32,7 +32,7 @@ const App = () => {
       <Route path="/NEWS" element={<NEWS/>}/>
       <Route path="/Bon" element={<Bon/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default App;
