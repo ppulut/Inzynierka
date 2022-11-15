@@ -8,16 +8,18 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import styled from 'styled-components'
 
-
-const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+const Button = styled.button`
+width: 40%;
+margin: 20px 10px 0px 0px;
+padding: 10px;
+border: none;
+border-radius:50px;
+background-color: lightpink;
+color: white;
+cursor: pointer;
+`
 
 const ContactUs = () => {
 
@@ -32,6 +34,18 @@ const ContactUs = () => {
         });
         e.target.reset()
     }
+
+
+    const [open, setOpen] = React.useState(false);
+
+const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
 
     return(
         <div>
@@ -52,30 +66,32 @@ const ContactUs = () => {
                             <textarea className="form-control" id="" cols="30" rows="8" placeholder="Twoja wiadomość" name="message" required ></textarea>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
-                            <input type="button" onClick={handleClickOpen} className="btn btn-info" value="Wyślij"></input>
-                        </div>
+                        <Button type="submit" variant="success" 
+                        onClick={() => {
+                            handleClickOpen()
+                            sendEmail()
+                            }}>Wyślij
+                        </Button>
                         <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+          Jeżeli wszystkie pola nie zostały uzupełnione mail nie zostanie wysłany!          </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose}>POWRÓT</Button>
           <Button onClick={handleClose} autoFocus>
-            Agree
+            WYŚLIJ
           </Button>
         </DialogActions>
       </Dialog>
+                        </div>
+                        
                     </div>
                 </form>
             </div>

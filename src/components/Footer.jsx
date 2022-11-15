@@ -4,11 +4,13 @@ import styled from 'styled-components'
 import {Link } from "react-router-dom";
 import { mobile } from '../responsive';
 
+
+//background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148908629.jpg?w=2000);
+
+
 const Container = styled.div`
 display: flex;
 ${mobile({ flexDirection: "column" })}
-background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148908629.jpg?w=2000);
-
 `
 
 const Lewo = styled.div`

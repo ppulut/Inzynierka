@@ -17,7 +17,13 @@ import {
 import { appointments } from '../demo-data/appointments';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import DataServices from '../services/DataServices'
+import DataServices from '../services/DataServices';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 
 const Button = styled.button`
 width: 40%;
@@ -168,6 +174,16 @@ const[data,setData]=useState([])
      });
    }, []);
 
+   const [open, setOpen] = React.useState(false);
+
+   const handleClickOpen = () => {
+       setOpen(true);
+     };
+   
+     const handleClose = () => {
+       setOpen(false);
+     };
+
 
   return (
       <div>
@@ -213,6 +229,26 @@ const[data,setData]=useState([])
                         sendEmail()
                         }}>Wyślij
                         </Button>
+                        <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Czy potwierdzasz swój wybór?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+          Jeżeli pola nie zostały poprawnie uzupełnione rezerwacja zostanie usunięta!   
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            WYŚLIJ
+          </Button>
+        </DialogActions>
+      </Dialog>
                         </div>
                     </div>
                 </form>
