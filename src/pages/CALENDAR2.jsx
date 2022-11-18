@@ -3,9 +3,7 @@ import emailjs from "emailjs-com";
 //import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import styled from 'styled-components'
-//import TextField from "@mui/material/TextField";
-//import MenuItem from "@mui/material/MenuItem";
-//import moment from 'moment';
+import Select from 'react-select'
 import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
 import {
   Scheduler,
@@ -184,6 +182,14 @@ const[data,setData]=useState([])
        setOpen(false);
      };
 
+     const options = [
+      { value: 'Manicure hybrydowy', label: 'Manicure hybrydowy' },
+      { value: 'Manicure żelowy', label: 'Manicure żelowy' },
+      { value: 'Manicure japoński', label: 'Manicure japoński' },
+      { value: 'Regulacja brwi', label: 'Regulacja brwi' },
+      { value: 'Peeling dłoni', label: 'Peeling dłoni' }
+    ]
+
 
   return (
       <div>
@@ -193,9 +199,14 @@ const[data,setData]=useState([])
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="Nazwa usługi" name="name" required  
-                            value={title}
-                            onChange={(e)=>setTitle(e.target.value)} />
+                        <select 
+                        value={title}
+                        onChange={(e)=>setTitle(e.target.value)}
+                        className="form-control">
+                        {options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                          ))}
+                        </select>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="email" className="form-control" placeholder="Email" name="email" required  
