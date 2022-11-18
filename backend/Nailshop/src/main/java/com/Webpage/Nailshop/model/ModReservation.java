@@ -21,7 +21,7 @@ public class ModReservation {
     @Id
 
 
-    private Long product_id;
+    private Long id;
 
     @Column(name = "Title")
     private String title;

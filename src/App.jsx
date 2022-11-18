@@ -12,6 +12,8 @@ import Calendar2 from "./pages/CALENDAR2";
 import PROBLEMS from "./pages/PROBLEMS";
 import Bon from "./pages/Bon";
 import NEWS from "./components/NEWS";
+import Admin from "./pages/Admin";
+import CalendarEdit from "./pages/CalendarEdit";
 
 
 const App = () => {
@@ -31,6 +33,8 @@ const App = () => {
       <Route path="/PROBLEMS" element={<PROBLEMS/>}/>
       <Route path="/NEWS" element={<NEWS/>}/>
       <Route path="/Bon" element={<Bon/>}/>
+      <Route path="/Admin" element={<Admin/>}/>
+      <Route path="/CalendarEdit" element={<CalendarEdit/>}/>
       </Routes>
     </HashRouter>
   );

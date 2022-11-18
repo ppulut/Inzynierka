@@ -41,6 +41,9 @@ public class NailshopApplication implements CommandLineRunner {
 	@Autowired
 	public ProblemsRepository problemsRepository;
 
+	@Autowired
+	public UsersRepository usersRepository;
+
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -378,6 +381,11 @@ public class NailshopApplication implements CommandLineRunner {
 		problems8.setTitle("Dobór koloru");
 		problems8.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
 		problemsRepository.save(problems8);
+
+		Users user1 = new Users();
+		user1.setLogin("admin");
+		user1.setPassword("admin");
+		usersRepository.save(user1);
 
 	}
 }

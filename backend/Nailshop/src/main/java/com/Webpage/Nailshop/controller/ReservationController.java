@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
-@CrossOrigin("*")
+
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/reservations")
 public class ReservationController {
 
@@ -31,6 +32,12 @@ public class ReservationController {
     public String add(@RequestBody ModReservation reservation){
         reservationsRepository.save(reservation);
         return "New user is added";
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable long id) {
+        reservationsRepository.deleteById(id);
+        return "Reservation deleted";
     }
 
     }

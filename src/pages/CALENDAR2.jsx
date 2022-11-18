@@ -119,7 +119,7 @@ const CALENDAR2 = () => {
     window.scrollTo(0, 0)
   }, [])
 
-const[name,setName]=useState('')
+const[title,setTitle]=useState('')
 const[email,setEmail]=useState('')
 const[phone,setPhone]=useState('')
 const[startDate,setStartDate]=useState('')
@@ -128,7 +128,7 @@ const[desc,setDesc]=useState('')
 const [show, setShow] = useState(false);
 
 const handleClick=(e)=>{
-  const user={name, email, phone, startDate, endDate, desc}
+  const user={title, email, phone, startDate, endDate, desc}
   console.log(user)
 
 fetch("http://localhost:8080/reservations/add",{
@@ -194,8 +194,8 @@ const[data,setData]=useState([])
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
                             <input type="text" className="form-control" placeholder="Nazwa usługi" name="name" required  
-                            value={name}
-                            onChange={(e)=>setName(e.target.value)} />
+                            value={title}
+                            onChange={(e)=>setTitle(e.target.value)} />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="email" className="form-control" placeholder="Email" name="email" required  
@@ -210,11 +210,13 @@ const[data,setData]=useState([])
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="datetime-local" className="form-control" placeholder="Data rozpoczęcia" name="subject" required 
                              value={startDate}
+                             min="2022-11-15T09:00" max="2023-06-14T18:00"
                              onChange={(e)=>setStartDate(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="datetime-local" className="form-control" placeholder="Data zakończenia" name="subject" required 
-                             value={endDate}
+                             value={endDate} 
+                             min="2022-11-15T09:00" max="2023-06-14T18:00"
                              onChange={(e)=>setEndDate(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
@@ -225,6 +227,7 @@ const[data,setData]=useState([])
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="submit" variant="success" 
                         onClick={() => {
+                        handleClickOpen()
                         handleClick()
                         sendEmail()
                         }}>Wyślij

@@ -20,11 +20,11 @@ public class Users {
     @Id
     private Long id;
 
-    @Column(name="Imie")
+    /*@Column(name="Imie")
     private String name;
 
     @Column(name="Nazwisko")
-    private String surname;
+    private String surname;*/
 
     @Column(name="Login")
     private String login;
@@ -32,7 +32,7 @@ public class Users {
     @Column(name="Haslo")
     private String password;
 
-    @Column(name="Re_haslo")
-    private String repassword;
+  //  @Column(name="Re_haslo")
+    //private String repassword;
 
 }

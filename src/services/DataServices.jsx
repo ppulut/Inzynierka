@@ -44,6 +44,9 @@ class DataServices{
         return axios.get(URL + "/reservations/Allreservations")
     }
 
+    deleteReservation(id){
+        return axios.delete(URL + "/reservations/delete/"+id)
+    }
 
     success(message, options) {
         alert({ ...options, type: alertType.success, message });

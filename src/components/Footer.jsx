@@ -97,6 +97,11 @@ const Footer = () => {
                 <MediaIcon color="55ACEE">
                     <Twitter/>
                 </MediaIcon>
+                <Opis>
+                <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/Admin"}>
+                Administracja
+                </Link>
+                </Opis>
             </SocialContainer>
        </Lewo>
 
