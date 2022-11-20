@@ -14,9 +14,7 @@ width: 100%;
 height: 100%;
 display: flex;
 flex-direction: column;
-align-items: center;
 z-index: 3;
-display: flex;
 align-items: center;
 justify-content: center;
 transition: all 0.5s ease;
@@ -26,7 +24,7 @@ cursor: pointer;
 const Container = styled.div`
 flex: 1;
 margin: 5px;
-height: 70vh;
+height: 75vh;
 width:100%;
 position: relative; 
 
@@ -55,7 +53,9 @@ ${mobile({ height: "40vh", width:"100%" })}
 
 const Tytul = styled.h1`
 color: white;
-margin-bottom: 5px;
+display: flex;
+align-items: center;
+margin-bottom: 10px;
 ${mobile({ height: "40vh", width:"100%" })}
 `
 

@@ -154,7 +154,7 @@ public class NailshopApplication implements CommandLineRunner {
 		ModCategory category5 = new ModCategory();
 		category5.setLink("Bon");
 		category5.setImg("https://weddingdream.b-cdn.net/wp-content/uploads/2020/07/Projekt-bez-tytulu-2-1024x683.jpg");
-		category5.setTitle("BON PODARUNKOWY");
+		category5.setTitle("BON PREZENTOWY");
 		categoryRepository.save(category5);
 
 		ModCategory category6 = new ModCategory();
