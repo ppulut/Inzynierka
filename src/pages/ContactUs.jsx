@@ -69,7 +69,6 @@ const handleClickOpen = () => {
                         <Button type="submit" variant="success" 
                         onClick={() => {
                             handleClickOpen()
-                            sendEmail()
                             }}>Wyślij
                         </Button>
                         <Dialog
@@ -85,7 +84,10 @@ const handleClickOpen = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>POWRÓT</Button>
-          <Button onClick={handleClose} autoFocus>
+          <Button  onClick={() => {
+                            handleClose()
+                            sendEmail()
+                            }} autoFocus>
             WYŚLIJ
           </Button>
         </DialogActions>

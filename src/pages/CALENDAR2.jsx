@@ -21,6 +21,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { margin } from "@mui/system";
 
 
 const Button = styled.button`
@@ -107,7 +108,7 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
   </StyledDiv>
 );*/
 
-const currentDate = '2022-11-16';
+const currentDate = '2022-11-23';
 const locale = "pl-PL";
 
 
@@ -235,12 +236,15 @@ const[data,setData]=useState([])
                             value={desc}
                             onChange={(e)=>setDesc(e.target.value)}></textarea>
                         </div>
+                        <div>
+                          <input type="checkbox" style={{margin:"30px 10px 0px 220px"}} required/>
+                          Akceptuje regulamin*
+                        </div>
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="submit" variant="success" 
                         onClick={() => {
                         handleClickOpen()
-                        handleClick()
-                        sendEmail()
+                  
                         }}>Wyślij
                         </Button>
                         <Dialog
@@ -258,7 +262,16 @@ const[data,setData]=useState([])
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+        <Button onClick={() => {
+                        handleClose()
+                        }} autoFocus>
+            POWRÓT
+          </Button>
+          <Button onClick={() => {
+            handleClose()
+                        handleClick()
+                        sendEmail()
+                        }} autoFocus>
             WYŚLIJ
           </Button>
         </DialogActions>
