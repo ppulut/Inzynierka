@@ -44,7 +44,9 @@ margin: 4px 12px 8px;
 const currentDate = '2022-11-16';
 const locale = "pl-PL";
 
-
+function refreshPage() {
+  window.location.reload(false);
+}
 const CalendarEdit = () => {
 
   useEffect(() => {
@@ -124,6 +126,7 @@ const[data,setData]=useState([])
                         <td>{data.endDate}</td>
                         <td>{data.desc}</td>
                         <td><button onClick={() => {
+                    refreshPage()
                     deleteRes(data.id)
                     }}><DeleteIcon color="red"></DeleteIcon></button></td>
                       </tr>
