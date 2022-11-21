@@ -29,6 +29,12 @@ public class ModReservation {
     @Column(name = "Email")
     private String email;
 
+    @Column(name = "Name")
+    private String name;
+
+    @Column(name = "Surname")
+    private String surname;
+
     @Column(name = "Phone")
     private String phone;
 
@@ -41,5 +47,6 @@ public class ModReservation {
     @Column(name = "Description")
     private String description;
 
-
+    @Column(name = "ClientIdCard")
+    private String cardNumber;
 }

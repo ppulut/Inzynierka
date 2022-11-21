@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 //import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import styled from 'styled-components'
+import {Link } from "react-router-dom";
 import Select from 'react-select'
 import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
 import {
@@ -119,6 +120,8 @@ const CALENDAR2 = () => {
   }, [])
 
 const[title,setTitle]=useState('')
+const[name,setName]=useState('')
+const[surname,setSurname]=useState('')
 const[email,setEmail]=useState('')
 const[phone,setPhone]=useState('')
 const[startDate,setStartDate]=useState('')
@@ -127,7 +130,7 @@ const[desc,setDesc]=useState('')
 const [show, setShow] = useState(false);
 
 const handleClick=(e)=>{
-  const user={title, email, phone, startDate, endDate, desc}
+  const user={title, name, surname, email, phone, startDate, endDate, desc}
   console.log(user)
 
 fetch("http://localhost:8080/reservations/add",{
@@ -210,6 +213,16 @@ const[data,setData]=useState([])
                         </select>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Imię" name="name" required  
+                            value={name}
+                            onChange={(e)=>setName(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Nazwisko" name="surname" required  
+                            value={surname}
+                            onChange={(e)=>setSurname(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
                             <input type="email" className="form-control" placeholder="Email" name="email" required  
                             value={email}
                             onChange={(e)=>setEmail(e.target.value)}/>
@@ -238,7 +251,7 @@ const[data,setData]=useState([])
                         </div>
                         <div>
                           <input type="checkbox" style={{margin:"30px 10px 0px 220px"}} required/>
-                          Akceptuje regulamin*
+                          Akceptuje <b><Link to={`/Regulamin`}>regulamin</Link> </b>*
                         </div>
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="submit" variant="success" 

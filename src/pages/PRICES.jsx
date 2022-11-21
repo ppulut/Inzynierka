@@ -1,10 +1,27 @@
 import React from 'react'
 import '../App.css';
 import {Link } from "react-router-dom";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import styled from 'styled-components'
 
 
 
 const PRICE = ({item}) => {
+
+  const [open, setOpen] = React.useState(false);
+
+   const handleClickOpen = () => {
+       setOpen(true);
+     };
+   
+     const handleClose = () => {
+       setOpen(false);
+     };
+
   return (
 <div class="koko">
     <div class="row">
@@ -32,8 +49,30 @@ const PRICE = ({item}) => {
         <img alt='img' class="imggg" src={item.img}></img>
           </div>
             </ul>
-            
-            <Link to={"/Calendar2"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Wybierz</button></Link>
+            <button type="button" class="btn btn-lg btn-block  btn-custom " onClick={() => {
+                        handleClickOpen()
+                  
+                        }}>Wybierz</button>
+        
+            <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Czy posiadasz Kartę Klienta?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+          Jeżeli nie posiadasz karty klienta wybierz pierwszą opcję, a podczas pierwszej wizyty będziesz mógł założyć Kartę Klienta z indywidualnym numerem, który wykorzystasz przy następnej rezerwacji
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+        <Link to={"/Calendar2"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Nie posiadam karty</button></Link>
+        <Link to={"/Calendar3"} ><button type="button" class="btn btn-lg btn-block  btn-custom ">Posiadam kartę</button></Link>
+        </DialogActions>
+      </Dialog>
           </div>
         </div>
         </div>  

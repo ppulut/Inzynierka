@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import {Link } from "react-router-dom";
-
+import styled from 'styled-components'
 import "../admin.css";
+
+const Button = styled.button`
+width: 40%;
+margin: 20px 10px 0px 0px;
+padding: 10px;
+border: none;
+border-radius:50px;
+background-color: lightpink;
+color: white;
+cursor: pointer;
+`
 
 function App() {
   // React States
@@ -56,17 +67,17 @@ function App() {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>Username </label>
+          <label>Login </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
         <div className="input-container">
-          <label>Password </label>
+          <label>Hasło </label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <Button type="submit">Prześlij</Button>
         </div>
       </form>
     </div>
@@ -77,9 +88,12 @@ function App() {
       <div className="login-form">
         <div className="title">Zalogowano</div>
         {isSubmitted ? <div>
+
             <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/CalendarEdit"}>
-            Zarządzaj terminarzem
+            Zarządzaj terminarzem lub dodaj nową Kartę Klienta
           </Link>
+          
+
         </div> : renderForm}
       </div>
     </div>

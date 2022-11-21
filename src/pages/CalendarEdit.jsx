@@ -92,6 +92,9 @@ const[data,setData]=useState([])
                   <tr>
                     <td>L.p.</td>
                     <td>Nazwa</td>
+                    <td>Imię</td>
+                    <td>Nazwisko</td>
+                    <td>Nr Karty Klienta</td>
                     <td>Email</td>
                     <td>Telefon</td>
                     <td>Data rozpoczęcia</td>
@@ -112,6 +115,9 @@ const[data,setData]=useState([])
                           {data.first} {data.last}
                         </td>
                         <td>{data.title}</td>
+                        <td>{data.name}</td>
+                        <td>{data.surname}</td>
+                        <td>{data.cardNumber}</td>
                         <td>{data.email}</td>
                         <td>{data.phone}</td>
                         <td>{data.startDate}</td>
