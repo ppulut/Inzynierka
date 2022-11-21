@@ -17,7 +17,7 @@ import {
     Table,
   } from "react-bootstrap";
   import DeleteIcon from '@mui/icons-material/Delete';
-  import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Button = styled.button`
 width: 40%;
@@ -71,16 +71,15 @@ const CalendarEdit = () => {
 const[data,setData]=useState([]);
 
 
-  useEffect(() => {
-    DataServices.getAllReservations().then((response) => {
-      setData(response.data);
+   useEffect(() => {
+    DataServices.getUsers().then((response) => {
+        setData(response.data);
      });
    }, []);
 
-
-
-    const deleteRes = (id) =>{
-        DataServices.deleteReservation(id)
+      
+      const deleteUsers = (id) =>{
+        DataServices.deleteUser(id)
       }
 
   return (
@@ -103,23 +102,19 @@ const[data,setData]=useState([]);
         </Scheduler> 
       </Paper>
 
-<Navi style={{opacity:'1'}}>Rezerwacje</Navi><Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/NewCard"}>
-            Dodaj nową Kartę Klienta
-          </Link></Navi>
+<Navi style={{opacity:'1'}}>Dodaj nową Kartę Klienta</Navi><Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/CalendarEdit"}>
+        Rezerwacje
+</Link></Navi>
       <Card.Body>
               <Table bordered hover striped variant="dark">
                 <thead>
                   <tr>
                     <td>L.p.</td>
-                    <td>Nazwa</td>
                     <td>Imię</td>
                     <td>Nazwisko</td>
-                    <td>Nr Karty Klienta</td>
-                    <td>Email</td>
                     <td>Telefon</td>
-                    <td>Data rozpoczęcia</td>
-                    <td>Data zakończenia</td>
-                    <td>Dodatkowy opis</td>
+                    <td>Email</td>
+                    <td>Nr Karty Klienta</td>
                     <td>Usuń</td>
                   </tr>
                 </thead>
@@ -134,18 +129,14 @@ const[data,setData]=useState([]);
                         <td>
                           {data.first} {data.last}
                         </td>
-                        <td>{data.title}</td>
-                        <td>{data.name}</td>
-                        <td>{data.surname}</td>
-                        <td>{data.cardNumber}</td>
-                        <td>{data.email}</td>
-                        <td>{data.phone}</td>
-                        <td>{data.startDate}</td>
-                        <td>{data.endDate}</td>
-                        <td>{data.desc}</td>
+                        <td>{data.imie}</td>
+                        <td>{data.nazwisko}</td>
+                        <td>{data.telefon}</td>
+                        <td>{data.mail}</td>
+                        <td>{data.nrKartyKlienta}</td>
                         <td><button onClick={() => {
                     refreshPage()
-                    deleteRes(data.id)
+                    deleteUsers(data.id)
                     }}><DeleteIcon color="red"></DeleteIcon></button></td>
                       </tr>
                     ))
@@ -153,6 +144,10 @@ const[data,setData]=useState([]);
                 </tbody>
               </Table>
             </Card.Body>
+            
+
+<h3>Zatwierdzeni klienci</h3>
+           
         <Footer/>
       </div>
     );

@@ -44,9 +44,18 @@ class DataServices{
         return axios.get(URL + "/reservations/Allreservations")
     }
 
+    getUsers(){
+        return axios.get("http://localhost:8080/users/getAll")
+    }
+
     deleteReservation(id){
         return axios.delete(URL + "/reservations/delete/"+id)
     }
+
+    deleteUser(id){
+        return axios.delete(URL + "/users/delete/"+id)
+    }
+
 
     success(message, options) {
         alert({ ...options, type: alertType.success, message });

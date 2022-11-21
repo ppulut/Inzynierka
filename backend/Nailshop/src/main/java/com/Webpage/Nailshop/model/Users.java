@@ -13,26 +13,26 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "Users")
+@Table(name = "users")
 public class Users {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
-    /*@Column(name="Imie")
-    private String name;
+    @Column(name="Imie")
+    private String imie;
 
     @Column(name="Nazwisko")
-    private String surname;*/
+    private String nazwisko;
 
-    @Column(name="Login")
-    private String login;
+    @Column(name="Email")
+    private String mail;
 
-    @Column(name="Haslo")
-    private String password;
+    @Column(name="Telefon")
+    private String telefon;
 
-  //  @Column(name="Re_haslo")
-    //private String repassword;
+    @Column(name="Nr_Karty_Klienta")
+    private String nrKartyKlienta;
 
 }

@@ -1,6 +1,7 @@
 package com.Webpage.Nailshop.controller;
 
 import com.Webpage.Nailshop.Service.UsersService;
+import com.Webpage.Nailshop.model.ModReservation;
 import com.Webpage.Nailshop.model.Users;
 import com.Webpage.Nailshop.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +20,22 @@ public class UsersController {
     @Autowired
     private UsersRepository usersRepository;
 
+
+
     @GetMapping("/getAll")
-    public List<Users> list(){
+    public  List<Users> getAll(){
         return usersService.getAllUsers();
     }
     @PostMapping("/add")
     public String add(@RequestBody Users users){
         usersRepository.save(users);
         return "New user is added";
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable long id) {
+        usersRepository.deleteById(id);
+        return "User deleted";
     }
 
 }

@@ -383,9 +383,28 @@ public class NailshopApplication implements CommandLineRunner {
 		problemsRepository.save(problems8);
 
 		Users user1 = new Users();
-		user1.setLogin("admin");
-		user1.setPassword("admin");
+		user1.setImie("Anna");
+		user1.setNazwisko("Nowak");
+		user1.setMail("anana@wp.pl");
+		user1.setTelefon("547125896");
+		user1.setNrKartyKlienta("100");
 		usersRepository.save(user1);
+
+		Users user2 = new Users();
+		user2.setImie("Jagoda");
+		user2.setNazwisko("Kowalska");
+		user2.setMail("jagko@gmail.com");
+		user2.setTelefon("145785469");
+		user2.setNrKartyKlienta("101");
+		usersRepository.save(user2);
+
+		Users user3 = new Users();
+		user3.setImie("Magda");
+		user3.setNazwisko("Malinowska");
+		user3.setMail("magmal@onet.pl");
+		user3.setTelefon("547854365");
+		user3.setNrKartyKlienta("102");
+		usersRepository.save(user3);
 
 	}
 }
