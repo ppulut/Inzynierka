@@ -112,6 +112,9 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
 const currentDate = '2022-11-23';
 const locale = "pl-PL";
 
+function refreshPage() {
+  window.location.reload(false);
+}
 
 const CALENDAR2 = () => {
 
@@ -282,6 +285,7 @@ const[data,setData]=useState([])
           </Button>
           <Button onClick={() => {
             handleClose()
+            refreshPage()
                         handleClick()
                         sendEmail()
                         }} autoFocus>

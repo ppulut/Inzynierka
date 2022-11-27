@@ -68,7 +68,6 @@ const CALENDAR3 = () => {
   }, [])
 
 const[title,setTitle]=useState('')
-const[email,setEmail]=useState('')
 const[phone,setPhone]=useState('')
 const[cardNumber,setCardNumber]=useState('')
 const[startDate,setStartDate]=useState('')
@@ -77,7 +76,7 @@ const[desc,setDesc]=useState('')
 const [show, setShow] = useState(false);
 
 const handleClick=(e)=>{
-  const user={title, email, phone, cardNumber, startDate, endDate, desc}
+  const user={title, phone, cardNumber, startDate, endDate, desc}
   console.log(user)
 
 fetch("http://localhost:8080/reservations/add",{
@@ -91,6 +90,9 @@ fetch("http://localhost:8080/reservations/add",{
 })
 }
 
+function refreshPage() {
+  window.location.reload(false);
+}
 
 const[data,setData]=useState([])
 
@@ -137,9 +139,9 @@ const[data,setData]=useState([])
                         </select>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email" className="form-control" placeholder="Email" name="email" required  
-                            value={email}
-                            onChange={(e)=>setEmail(e.target.value)}/>
+                            <input type="text" className="form-control" placeholder="Numer karty klienta" name="cardId" required  
+                            value={cardNumber}
+                            onChange={(e)=>setCardNumber(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
@@ -196,6 +198,7 @@ const[data,setData]=useState([])
           </Button>
           <Button onClick={() => {
             handleClose()
+            refreshPage()
                         handleClick()
                         sendEmail()
                         }} autoFocus>

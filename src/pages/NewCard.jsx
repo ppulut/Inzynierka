@@ -30,13 +30,6 @@ color: white;
 cursor: pointer;
 `
 
-const Nav = styled.h1`
-font-size: 36px;
-color: rgb(26, 26, 26);
-font-weight: bold;
-padding:30px;
-margin: 4px 12px 8px;
-`
 
 const Navi = styled.h3`
 display: flex;
@@ -54,6 +47,7 @@ transition: 0.5s ease-out;
 `;
 
 
+
 const currentDate = '2022-11-16';
 const locale = "pl-PL";
 
@@ -66,7 +60,27 @@ const CalendarEdit = () => {
     window.scrollTo(0, 0)
   }, [])
 
-
+  const[nrKartyKlienta,setCardNumber]=useState('')
+  const[imie,setName]=useState('')
+  const[nazwisko,setSurname]=useState('')
+  const[mail,setEmail]=useState('')
+  const[telefon,setPhone]=useState('')
+  const [show, setShow] = useState(false);
+  
+  const handleClick=(e)=>{
+    const user={nrKartyKlienta, imie, nazwisko, mail, telefon}
+    console.log(user)
+  
+  fetch("http://localhost:8080/users/add",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(user)
+  
+  }).then((confirm)=>{
+    console.log("New user added")
+    setShow(true);
+  })
+  }
 
 const[data,setData]=useState([]);
 
@@ -85,22 +99,48 @@ const[data,setData]=useState([]);
   return (
       <div>
         <Navbar/>
-        <Paper>
-        <Scheduler
-          data={data}
-          locale={locale}
-          height={660}
-        >
-          <ViewState defaultCurrentDate={currentDate}/>
-            <Toolbar />
-            <DateNavigator />
-          <WeekView
-            startDayHour={9}
-            endDayHour={19}
-          />
-          <Appointments />
-        </Scheduler> 
-      </Paper>
+        <h3>Zatwierdzeni klienci</h3>
+<div>
+<div className="container">
+            <form>
+                    <div className="row pt-5 mx-auto">
+                    <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Numer Karty Klienta" name="cardId" required  
+                            value={nrKartyKlienta}
+                            onChange={(e)=>setCardNumber(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Imię" name="name" required  
+                            value={imie}
+                            onChange={(e)=>setName(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Nazwisko" name="surname" required  
+                            value={nazwisko}
+                            onChange={(e)=>setSurname(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="email" className="form-control" placeholder="Email" name="email" required  
+                            value={mail}
+                            onChange={(e)=>setEmail(e.target.value)}/>
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
+                             value={telefon}
+                             onChange={(e)=>setPhone(e.target.value)}/>
+                        </div>
+                        <div className="col-8 pt-3 mx-auto">
+                        <Button type="button" variant="success" 
+                        onClick={() => {
+                          refreshPage()
+                          handleClick()
+                        }}>Wyślij
+                        </Button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
 
 <Navi style={{opacity:'1'}}>Dodaj nową Kartę Klienta</Navi><Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/CalendarEdit"}>
         Rezerwacje
@@ -145,9 +185,6 @@ const[data,setData]=useState([]);
               </Table>
             </Card.Body>
             
-
-<h3>Zatwierdzeni klienci</h3>
-           
         <Footer/>
       </div>
     );
