@@ -1,14 +1,5 @@
 import  React, {useState, useEffect} from "react";
-import Paper from "@mui/material/Paper";
 import styled from 'styled-components'
-import { ViewState } from "@devexpress/dx-react-scheduler";
-import {
-  Scheduler,
-  WeekView,
-  Toolbar,
-  DateNavigator,
-  Appointments,
-} from "@devexpress/dx-react-scheduler-material-ui";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import DataServices from '../services/DataServices';
@@ -47,31 +38,27 @@ transition: 0.5s ease-out;
 `;
 
 
-
-const currentDate = '2022-11-16';
-const locale = "pl-PL";
-
 function refreshPage() {
   window.location.reload(false);
 }
-const CalendarEdit = () => {
+const BlackList = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  const[nrKartyKlienta,setCardNumber]=useState('')
-  const[imie,setName]=useState('')
-  const[nazwisko,setSurname]=useState('')
-  const[mail,setEmail]=useState('')
-  const[telefon,setPhone]=useState('')
+  const[cardNumber,setCardNumber]=useState('')
+  const[name,setName]=useState('')
+  const[surname,setSurname]=useState('')
+  const[email,setEmail]=useState('')
+  const[phone,setPhone]=useState('')
   const [show, setShow] = useState(false);
   
   const handleClick=(e)=>{
-    const user={nrKartyKlienta, imie, nazwisko, mail, telefon}
+    const user={cardNumber, name, surname, phone, email}
     console.log(user)
   
-  fetch("http://localhost:8080/users/add",{
+  fetch("http://localhost:8080/blacklist/add",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(user)
@@ -86,53 +73,53 @@ const[data,setData]=useState([]);
 
 
    useEffect(() => {
-    DataServices.getUsers().then((response) => {
+    DataServices.getBlackList().then((response) => {
         setData(response.data);
      });
    }, []);
 
       
-      const deleteUsers = (id) =>{
-        DataServices.deleteUser(id)
+      const deleteBLUser = (id) =>{
+        DataServices.deleteBlackListUser(id)
       }
 
   return (
       <div>
         <Navbar/>
-        <h3>Zatwierdzeni klienci</h3>
+        <h3>Klienci na czarnej liście</h3>
 <div>
 <div className="container">
             <form>
                     <div className="row pt-5 mx-auto">
                     <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Numer Karty Klienta" name="cardId" required  
-                            value={nrKartyKlienta}
+                            value={cardNumber}
                             onChange={(e)=>setCardNumber(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Imię" name="name" required  
-                            value={imie}
+                            value={name}
                             onChange={(e)=>setName(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Nazwisko" name="surname" required  
-                            value={nazwisko}
+                            value={surname}
                             onChange={(e)=>setSurname(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="email" className="form-control" placeholder="Email" name="email" required  
-                            value={mail}
+                            value={email}
                             onChange={(e)=>setEmail(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
-                             value={telefon}
+                             value={phone}
                              onChange={(e)=>setPhone(e.target.value)}/>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="button" variant="success" 
                         onClick={() => {
-                          refreshPage()
+                            refreshPage()
                           handleClick()
                         }}>Wyślij
                         </Button>
@@ -145,9 +132,10 @@ const[data,setData]=useState([]);
 
 <Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/CalendarEdit"}>
         Rezerwacje</Link></Navi>
-<Navi style={{opacity:'1'}}>Dodaj nową Kartę Klienta</Navi>
-<Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/BlackList"}>
-            Czarna lista klientów</Link></Navi>   
+<Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/NewCard"}>
+        Dodaj nową Kartę Klienta</Link></Navi>
+<Navi style={{opacity:'1'}}>Czarna lista klientów</Navi>
+
       <Card.Body>
               <Table bordered hover striped variant="dark">
                 <thead>
@@ -172,14 +160,14 @@ const[data,setData]=useState([]);
                         <td>
                           {data.first} {data.last}
                         </td>
-                        <td>{data.imie}</td>
-                        <td>{data.nazwisko}</td>
-                        <td>{data.telefon}</td>
-                        <td>{data.mail}</td>
-                        <td>{data.nrKartyKlienta}</td>
+                        <td>{data.name}</td>
+                        <td>{data.surname}</td>
+                        <td>{data.phone}</td>
+                        <td>{data.email}</td>
+                        <td>{data.cardNumber}</td>
                         <td><button onClick={() => {
                     refreshPage()
-                    deleteUsers(data.id)
+                    deleteBLUser(data.id)
                     }}><DeleteIcon color="red"></DeleteIcon></button></td>
                       </tr>
                     ))
@@ -195,4 +183,4 @@ const[data,setData]=useState([]);
   
 
 
-export default CalendarEdit
+export default BlackList

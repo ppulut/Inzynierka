@@ -44,6 +44,8 @@ public class NailshopApplication implements CommandLineRunner {
 	@Autowired
 	public UsersRepository usersRepository;
 
+	@Autowired
+	public BlackListRepository blackListRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -405,6 +407,22 @@ public class NailshopApplication implements CommandLineRunner {
 		user3.setTelefon("547854365");
 		user3.setNrKartyKlienta("102");
 		usersRepository.save(user3);
+
+		ModBlackList blackList1 = new ModBlackList();
+		blackList1.setName("Krystyna");
+		blackList1.setSurname("Janko");
+		blackList1.setEmail("krychapaw@onet.pl");
+		blackList1.setPhone("547854365");
+		blackList1.setCardNumber("666");
+		blackListRepository.save(blackList1);
+
+		ModBlackList blackList2 = new ModBlackList();
+		blackList2.setName("Halina");
+		blackList2.setSurname("Nowak");
+		blackList2.setEmail("hn@onet.pl");
+		blackList2.setPhone("123543234");
+		blackList2.setCardNumber("423");
+		blackListRepository.save(blackList2);
 
 	}
 }

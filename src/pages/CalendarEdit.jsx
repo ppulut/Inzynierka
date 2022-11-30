@@ -103,9 +103,11 @@ const[data,setData]=useState([]);
         </Scheduler> 
       </Paper>
 
-<Navi style={{opacity:'1'}}>Rezerwacje</Navi><Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/NewCard"}>
-            Dodaj nową Kartę Klienta
-          </Link></Navi>
+<Navi style={{opacity:'1'}}>Rezerwacje</Navi>
+<Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/NewCard"}>
+            Dodaj nową Kartę Klienta</Link></Navi>
+<Navi><Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/BlackList"}>
+            Czarna lista klientów</Link></Navi>           
       <Card.Body>
               <Table bordered hover striped variant="dark">
                 <thead>

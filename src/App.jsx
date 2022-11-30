@@ -17,6 +17,8 @@ import Admin from "./pages/Admin";
 import CalendarEdit from "./pages/CalendarEdit";
 import Regulamin from "./pages/Regulamin";
 import NewCard from "./pages/NewCard"
+import Testform from "./pages/testform"
+import BlackList from "./pages/BlackList";
 
 
 const App = () => {
@@ -41,6 +43,8 @@ const App = () => {
       <Route path="/CalendarEdit" element={<CalendarEdit/>}/>
       <Route path="/Regulamin" element={<Regulamin/>}/>
       <Route path="/NewCard" element={<NewCard/>}/>
+      <Route path="/testform" element={<Testform/>}/>
+      <Route path="/BlackList" element={<BlackList/>}/>
       </Routes>
     </HashRouter>
   );

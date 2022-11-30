@@ -1,9 +1,8 @@
 import  React, {useState, useEffect} from "react";
 import emailjs from "emailjs-com";
-//import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import styled from 'styled-components'
-import {Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Select from 'react-select'
 import { ViewState, EditingState } from "@devexpress/dx-react-scheduler";
 import {
@@ -13,7 +12,6 @@ import {
   DateNavigator,
   Appointments,
 } from "@devexpress/dx-react-scheduler-material-ui";
-import { appointments } from '../demo-data/appointments';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import DataServices from '../services/DataServices';
@@ -22,8 +20,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { margin } from "@mui/system";
-
+import { reservationMail } from '../components/MailValid'
+import { useFormik } from 'formik';
 
 const Button = styled.button`
 width: 40%;
@@ -57,57 +55,6 @@ padding:30px;
 margin: 4px 12px 8px;
 `
 
-const allDayLocalizationMessages = {
-  "pl-PL": {
-    allDay: "Cały dzień"
-  },
-  /*"en-US": {
-    allDay: "All Day"
-  }*/
-};
-
-
-/*
-const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)({
-    [`&.${classes.dayScaleCell}`]: {
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-    },
-  });
-  
-  const formatDayScaleDate = (date, options) => {
-    const momentDate = moment(date);
-    const { weekday } = options;
-    return momentDate.format(weekday ? 'dddd' : 'D');
-  };
-  const formatTimeScaleDate = date => moment(date).format('hh:mm');
-  
-  const DayScaleCell = ((
-    { formatDate, ...restProps },
-  ) => (
-    <StyledWeekViewDayScaleCell
-      {...restProps}
-      formatDate={formatDayScaleDate}
-      className={classes.dayScaleCell}
-    />
-  ));
-  const TimeScaleLabel = (
-    { formatDate, ...restProps },
-  ) => <WeekView.TimeScaleLabel {...restProps} formatDate={formatTimeScaleDate} />;
-
-*/
-/*const LocaleSwitcher = ({ onLocaleChange, currentLocale }) => (
-  <StyledDiv className={classes.container}>
-    <div className={classes.text}>Locale:</div>
-    <TextField
-      select
-      variant="standard"
-      value={currentLocale}
-      onChange={onLocaleChange}
-    >
-    </TextField>
-  </StyledDiv>
-);*/
 
 const currentDate = '2022-11-23';
 const locale = "pl-PL";
@@ -116,11 +63,23 @@ function refreshPage() {
   window.location.reload(false);
 }
 
+
+
 const CALENDAR2 = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+
+  const {values, errors, handleBlur, touched } = useFormik({
+    initialValues: {
+        email: "",
+    },
+    validationSchema: reservationMail,
+    
+  });
+
 
 const[title,setTitle]=useState('')
 const[name,setName]=useState('')
@@ -147,29 +106,6 @@ fetch("http://localhost:8080/reservations/add",{
 })
 }
 
-/*
-const handleClick2=(e)=>{
-  e.preventDefault()
-  const user={name, email, phone, startDate, endDate, desc}
-  console.log(user)
-
-  
-
-fetch("http://localhost:8080/reservations/Allreservations",{
-    method:"GET",
-    headers:{"Content-Type":"application/json"},
-    
-   
-
-}).then((res) => res.json())
-.then((json) => {
-    this.setState({
-        items: json,
-        DataisLoaded: true
-    });
-})
-}
-*/
 
 const[data,setData]=useState([])
 
@@ -226,9 +162,14 @@ const[data,setData]=useState([])
                             onChange={(e)=>setSurname(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email" className="form-control" placeholder="Email" name="email" required  
+                            <input id="email" type="email" placeholder="Email" name="email" required  
                             value={email}
+                            className={`form-control ${errors.email && touched.email ? "invalid" : ""}`}
+                            onBlur={handleBlur}
                             onChange={(e)=>setEmail(e.target.value)}/>
+                            {errors.email && touched.email &&
+                              <small name="email" className="text-danger">{errors.email}</small>
+                      }
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 

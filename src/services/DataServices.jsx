@@ -48,12 +48,24 @@ class DataServices{
         return axios.get("http://localhost:8080/users/getAll")
     }
 
+    getBlackList(){
+        return axios.get("http://localhost:8080/blacklist/AllBlackList")
+    }
+
+    getEmail(email){
+        return axios.get("http://localhost:8080/blacklist/email"+email)
+    }
+
     deleteReservation(id){
         return axios.delete(URL + "/reservations/delete/"+id)
     }
 
     deleteUser(id){
         return axios.delete(URL + "/users/delete/"+id)
+    }
+
+    deleteBlackListUser(id){
+        return axios.delete(URL + "/blacklist/delete/"+id)
     }
 
 
