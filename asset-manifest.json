@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Inzynierka/static/css/main.ef6f6dc7.css",
-    "main.js": "/Inzynierka/static/js/main.1af4f39f.js",
+    "main.js": "/Inzynierka/static/js/main.a26313b8.js",
     "index.html": "/Inzynierka/index.html",
     "main.ef6f6dc7.css.map": "/Inzynierka/static/css/main.ef6f6dc7.css.map",
-    "main.1af4f39f.js.map": "/Inzynierka/static/js/main.1af4f39f.js.map"
+    "main.a26313b8.js.map": "/Inzynierka/static/js/main.a26313b8.js.map"
   },
   "entrypoints": [
     "static/css/main.ef6f6dc7.css",
-    "static/js/main.1af4f39f.js"
+    "static/js/main.a26313b8.js"
   ]
 }
