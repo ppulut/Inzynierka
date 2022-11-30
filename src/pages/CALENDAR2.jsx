@@ -72,7 +72,7 @@ const CALENDAR2 = () => {
   }, [])
 
 
-  const {values, errors, handleBlur, touched } = useFormik({
+  const {values, errors, handleBlur, touched, handleSubmit, handleChange } = useFormik({
     initialValues: {
         email: "",
     },
@@ -162,14 +162,18 @@ const[data,setData]=useState([])
                             onChange={(e)=>setSurname(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input id="email" type="email" placeholder="Email" name="email" required  
-                            value={email}
+                            <input type="email"
                             className={`form-control ${errors.email && touched.email ? "invalid" : ""}`}
+                            value={values.email}
+                            onChange={handleChange}
                             onBlur={handleBlur}
-                            onChange={(e)=>setEmail(e.target.value)}/>
+                            id="email"
+                            name="email"
+                            placeholder='Podaj e-mail'
+                            />
                             {errors.email && touched.email &&
-                              <small name="email" className="text-danger">{errors.email}</small>
-                      }
+                                    <small name="email" className="text-danger">{errors.email}</small>
+                            }
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
