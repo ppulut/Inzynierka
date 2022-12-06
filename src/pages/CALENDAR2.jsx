@@ -177,7 +177,7 @@ const[data,setData]=useState([])
                             onBlur={handleBlur}
                             id="email2"
                             name="email2"
-                            placeholder='Powtórz e-mail'
+                            placeholder='Podaj e-mail'
                             />
                             {errors.email2 && touched.email2 &&
                                     <small name="email" className="text-danger">{errors.email2}</small>
@@ -187,7 +187,7 @@ const[data,setData]=useState([])
                             <input type="email"
                             className='form-control'
                             onChange={(e)=>setEmail(e.target.value)}
-                            placeholder='Podaj e-mail'
+                            placeholder='Powtórz e-mail'
                             />
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
