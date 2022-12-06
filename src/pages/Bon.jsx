@@ -6,8 +6,9 @@ import "../ServiceDesign.css"
 import {Link } from "react-router-dom";
 import { mobile } from "../responsive";
 
+//background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148908629.jpg?w=2000);
+
 const Container = styled.div`
-background-image: url(https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148908629.jpg?w=2000);
 ${mobile({ textAlign: "center" })}
 ${mobile({ width:"100%", scale:"1" })}
 `;
@@ -43,7 +44,18 @@ display: flex;
 margin-right: auto;
 margin-left: auto;
 position: relative;
+width:60%;
+font-size:25px;
+font-family: monospace;
+`;
+
+const Image = styled.image`
+padding: 20px 100px 40px 0px;
+display: flex;
+margin-right: auto;
+position: relative;
 width:40%;
+height:40vh;
 font-size:25px;
 font-family: monospace;
 `;
@@ -93,6 +105,9 @@ const Bon = () => {
         Bon upominkowy na dowolną kwotę, bądź usługę będzie idealnym rozwiązaniem.
         Możesz wybrać spośród oferowanych przez nas zabiegów i usług lub zakupić voucher na wybraną przez siebie kwotę.
         Zakupiony u nas bon jest ważny przez 1 rok od daty zakupu. O wszystkich szczegółach dowiesz się w naszym salonie - możesz to uczynić poniżej, za pomocą formularza kontaktowego.
+        <Image>
+          <img src='https://fotoomnia.com/zdjecia/thu/ec21e9c6df3a7e60fb94daf8ef670686.jpg'/>
+        </Image>
         </Info>
         <Consultation>
         <H2>Spraw przyjemność sobie lub komuś bliskiemu i zarezerwuj termin na konsultację</H2>

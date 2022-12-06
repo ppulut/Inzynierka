@@ -144,7 +144,7 @@ const[data,setData]=useState([])
                             onChange={(e)=>setCardNumber(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
+                            <input type="text" maxlength="9" className="form-control" placeholder="Nr telefonu" name="subject" required 
                              value={phone}
                              onChange={(e)=>setPhone(e.target.value)}/>
                         </div>

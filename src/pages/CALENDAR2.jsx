@@ -56,7 +56,7 @@ margin: 4px 12px 8px;
 `
 
 
-const currentDate = '2022-11-23';
+const currentDate = '2022-12-07';
 const locale = "pl-PL";
 
 function refreshPage() {
@@ -75,6 +75,7 @@ const CALENDAR2 = () => {
   const {values, errors, handleBlur, touched, handleSubmit, handleChange } = useFormik({
     initialValues: {
         email: "",
+        phone: "",
     },
     validationSchema: reservationMail,
     
@@ -132,7 +133,7 @@ const[data,setData]=useState([])
       { value: 'Regulacja brwi', label: 'Regulacja brwi' },
       { value: 'Peeling dłoni', label: 'Peeling dłoni' }
     ]
-
+ 
 
   return (
       <div>
@@ -176,9 +177,12 @@ const[data,setData]=useState([])
                             }
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="text" className="form-control" placeholder="Nr telefonu" name="subject" required 
-                             value={phone}
-                             onChange={(e)=>setPhone(e.target.value)}/>
+                            <input type="text" maxlength="9" className="form-control"
+                            placeholder="Nr telefonu" name="subject" required 
+                            value={phone}
+                            onBlur={handleBlur}
+                            onChange={(e)=>setPhone(e.target.value)}/>
+                            
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="datetime-local" className="form-control" placeholder="Data rozpoczęcia" name="subject" required 
@@ -204,8 +208,12 @@ const[data,setData]=useState([])
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="submit" variant="success" 
                         onClick={() => {
-                        handleClickOpen()
-                  
+                        if(errors.email && touched.email == true){  
+                        handleClose()
+                        }
+                        else{
+                          handleClickOpen()
+                        }
                         }}>Wyślij
                         </Button>
                         <Dialog
@@ -230,6 +238,7 @@ const[data,setData]=useState([])
           </Button>
           <Button onClick={() => {
             handleClose()
+            setEmail(values.email)
             refreshPage()
                         handleClick()
                         sendEmail()
