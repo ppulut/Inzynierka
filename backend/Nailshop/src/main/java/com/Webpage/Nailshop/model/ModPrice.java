@@ -26,5 +26,7 @@ public class ModPrice {
     @Column(name = "Image")
     private String img;
 
+    @Column(name = "Time")
+    private String time;
 
 }

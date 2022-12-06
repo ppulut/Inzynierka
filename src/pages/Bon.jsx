@@ -45,7 +45,7 @@ margin-right: auto;
 margin-left: auto;
 position: relative;
 width:60%;
-font-size:25px;
+font-size:22px;
 font-family: monospace;
 `;
 
@@ -56,8 +56,6 @@ margin-right: auto;
 position: relative;
 width:40%;
 height:40vh;
-font-size:25px;
-font-family: monospace;
 `;
 
 

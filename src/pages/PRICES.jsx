@@ -32,6 +32,7 @@ const PRICE = ({item}) => {
           <div class="pricing-divider ">
               <h3 class="text-light">{item.name}</h3>
             <h4 class="my-0 display-2 text-light font-weight-normal mb-3">{item.cena}<span class="h3">{item.waluta}</span></h4>
+            <h5 class="text-light">{item.time}</h5>
              <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xmlSpace='preserve' xmlnsLink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
           <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
 	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>

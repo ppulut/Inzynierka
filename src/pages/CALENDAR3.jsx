@@ -113,11 +113,18 @@ const[data,setData]=useState([])
      };
 
      const options = [
+      { value: 'Manicure klasyczny', label: 'Manicure klasyczny'},
+      { value: 'Manicure japoński', label: 'Manicure japoński' },
       { value: 'Manicure hybrydowy', label: 'Manicure hybrydowy' },
       { value: 'Manicure żelowy', label: 'Manicure żelowy' },
-      { value: 'Manicure japoński', label: 'Manicure japoński' },
-      { value: 'Regulacja brwi', label: 'Regulacja brwi' },
-      { value: 'Peeling dłoni', label: 'Peeling dłoni' }
+      { value: 'Parafinowanie dłoni ', label: 'Parafinowanie dłoni ' },
+      { value: 'Masaż dłoni na peelingu ', label: 'Masaż dłoni na peelingu ' },
+      { value: 'Regeneracja dłoni ', label: 'Regeneracja dłoni ' },
+      { value: 'Usunięcie stylizacji ', label: 'Usunięcie stylizacji ' },
+      { value: 'Geometria i regulacja brwi ', label: 'Geometria i regulacja brwi ' },
+      { value: 'Geometria, regulacja i farbka brwi ', label: 'Geometria, regulacja i farbka brwi ' },
+      { value: 'Laminacja, geometria, regulacja i farbka brwi ', label: 'Laminacja, geometria, regulacja i farbka brwi ' },
+      { value: 'Przedłużenie pojedynczego paznokcia bazą budującą/żelem ', label: 'Przedłużenie pojedynczego paznokcia bazą budującą/żelem ' },
     ]
 
 

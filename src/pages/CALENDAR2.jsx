@@ -74,7 +74,7 @@ const CALENDAR2 = () => {
 
   const {values, errors, handleBlur, touched, handleSubmit, handleChange } = useFormik({
     initialValues: {
-        email: "",
+        email2: "",
         phone: "",
     },
     validationSchema: reservationMail,
@@ -127,11 +127,18 @@ const[data,setData]=useState([])
      };
 
      const options = [
+      { value: 'Manicure klasyczny', label: 'Manicure klasyczny'},
+      { value: 'Manicure japoński', label: 'Manicure japoński' },
       { value: 'Manicure hybrydowy', label: 'Manicure hybrydowy' },
       { value: 'Manicure żelowy', label: 'Manicure żelowy' },
-      { value: 'Manicure japoński', label: 'Manicure japoński' },
-      { value: 'Regulacja brwi', label: 'Regulacja brwi' },
-      { value: 'Peeling dłoni', label: 'Peeling dłoni' }
+      { value: 'Parafinowanie dłoni ', label: 'Parafinowanie dłoni ' },
+      { value: 'Masaż dłoni na peelingu ', label: 'Masaż dłoni na peelingu ' },
+      { value: 'Regeneracja dłoni ', label: 'Regeneracja dłoni ' },
+      { value: 'Usunięcie stylizacji ', label: 'Usunięcie stylizacji ' },
+      { value: 'Geometria i regulacja brwi ', label: 'Geometria i regulacja brwi ' },
+      { value: 'Geometria, regulacja i farbka brwi ', label: 'Geometria, regulacja i farbka brwi ' },
+      { value: 'Laminacja, geometria, regulacja i farbka brwi ', label: 'Laminacja, geometria, regulacja i farbka brwi ' },
+      { value: 'Przedłużenie pojedynczego paznokcia bazą budującą/żelem ', label: 'Przedłużenie pojedynczego paznokcia bazą budującą/żelem ' },
     ]
  
 
@@ -163,18 +170,25 @@ const[data,setData]=useState([])
                             onChange={(e)=>setSurname(e.target.value)}/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <input type="email"
-                            className={`form-control ${errors.email && touched.email ? "invalid" : ""}`}
-                            value={values.email}
+                            <input type="email2"
+                            className={`form-control ${errors.email2 && touched.email2 ? "invalid" : ""}`}
+                            value={values.email2}
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            id="email"
-                            name="email"
+                            id="email2"
+                            name="email2"
+                            placeholder='Powtórz e-mail'
+                            />
+                            {errors.email2 && touched.email2 &&
+                                    <small name="email" className="text-danger">{errors.email2}</small>
+                            }
+                        </div>
+                        <div className="col-8 form-group pt-2 mx-auto">
+                            <input type="email"
+                            className='form-control'
+                            onChange={(e)=>setEmail(e.target.value)}
                             placeholder='Podaj e-mail'
                             />
-                            {errors.email && touched.email &&
-                                    <small name="email" className="text-danger">{errors.email}</small>
-                            }
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
                             <input type="text" maxlength="9" className="form-control"
@@ -208,7 +222,7 @@ const[data,setData]=useState([])
                         <div className="col-8 pt-3 mx-auto">
                         <Button type="submit" variant="success" 
                         onClick={() => {
-                        if(errors.email && touched.email == true){  
+                        if(errors.email2 && touched.email2 == true){  
                         handleClose()
                         }
                         else{

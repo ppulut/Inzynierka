@@ -27,4 +27,5 @@ public class ModDetails {
     private String price;
 
 
+
 }
