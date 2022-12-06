@@ -19,10 +19,11 @@ export const reservationMail = yup.object().shape({
                     })
                 }
             ),
+            
 
 
 
     phone: yup.string().required("Numer telefonu jest wymagany")
-    .max(9, "Numer może mieć maksymalnie 9 cyfr")
+    .max(9, "Numer może mieć maksymalnie 9 cyfr"),
 
 })
