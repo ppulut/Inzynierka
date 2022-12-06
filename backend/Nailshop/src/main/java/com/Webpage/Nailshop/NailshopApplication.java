@@ -178,7 +178,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price2.setName("Manicure japoński");
 		price2.setCena("80");
 		price2.setWaluta("zł");
-		price2.setTime("1h 30min");
+		price2.setTime("1h 15min");
 		price2.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/2.jpg");
 		priceRepository.save(price2);
 
@@ -194,7 +194,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price4.setName("Manicure żelowy");
 		price4.setCena("130");
 		price4.setWaluta("zł");
-		price4.setTime("1h 30min");
+		price4.setTime("2h 00min");
 		price4.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/4.jpg");
 		priceRepository.save(price4);
 
@@ -202,7 +202,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price5.setName("Parafinowanie dłoni");
 		price5.setCena("30");
 		price5.setWaluta("zł");
-		price5.setTime("1h 30min");
+		price5.setTime("30min");
 		price5.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/5.jpg");
 		priceRepository.save(price5);
 
@@ -210,7 +210,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price6.setName("Masaż dłoni na peelingu");
 		price6.setCena("20");
 		price6.setWaluta("zł");
-		price6.setTime("1h 30min");
+		price6.setTime("1h 00min");
 		price6.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/6.jpg");
 		priceRepository.save(price6);
 
@@ -218,7 +218,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price7.setName("Regeneracja dłoni");
 		price7.setCena("60");
 		price7.setWaluta("zł");
-		price7.setTime("1h 30min");
+		price7.setTime("30min");
 		price7.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/7.jpg");
 		priceRepository.save(price7);
 
@@ -226,7 +226,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price8.setName("Usunięcie stylizacji");
 		price8.setCena("30");
 		price8.setWaluta("zł");
-		price8.setTime("1h 30min");
+		price8.setTime("40min");
 		price8.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/8.jpg");
 		priceRepository.save(price8);
 
@@ -234,7 +234,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price9.setName("Geometria i regulacja brwi");
 		price9.setCena("40");
 		price9.setWaluta("zł");
-		price9.setTime("1h 30min");
+		price9.setTime("30min");
 		price9.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/9.jpg");
 		priceRepository.save(price9);
 
@@ -242,7 +242,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price10.setName("Geometria, regulacja i farbka brwi");
 		price10.setCena("80");
 		price10.setWaluta("zł");
-		price10.setTime("1h 30min");
+		price10.setTime("40min");
 		price10.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/10.jpg");
 		priceRepository.save(price10);
 
@@ -250,7 +250,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price11.setName("Laminacja, geometria, regulacja i farbka brwi");
 		price11.setCena("120");
 		price11.setWaluta("zł");
-		price11.setTime("1h 30min");
+		price11.setTime("1h 00min");
 		price11.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/11.jpg");
 		priceRepository.save(price11);
 
@@ -258,7 +258,7 @@ public class NailshopApplication implements CommandLineRunner {
 		price12.setName("Przedłużenie pojedynczego paznokcia bazą budującą/żelem");
 		price12.setCena("10");
 		price12.setWaluta("zł");
-		price12.setTime("1h 30min");
+		price12.setTime("15min");
 		price12.setImg("https://raw.githubusercontent.com/ppulut/Inzynierka/master/zdj%C4%99cia-cennik/12.jpg");
 		priceRepository.save(price12);
 
