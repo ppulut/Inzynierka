@@ -127,11 +127,6 @@ const Footer = () => {
           <ListItem>Regulamin</ListItem></Link>
 
 
-
-          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={"/testform"}>
-          <ListItem>asdasds</ListItem></Link>
-
-
         </List>
        </Center>
 
