@@ -21,6 +21,15 @@ color: white;
 cursor: pointer;
 `
 
+const Nav = styled.h1`
+font-size: 36px;
+color: rgb(26, 26, 26);
+font-weight: bold;
+padding:30px;
+margin: 4px 12px 8px
+
+`
+
 const ContactUs = () => {
 
     function sendEmail(e) {
@@ -50,6 +59,7 @@ const handleClickOpen = () => {
     return(
         <div>
             <Navbar/>
+            <Nav>Formularz kontaktowy</Nav>
             <div className="container">
             <form onSubmit={sendEmail}>
                     <div className="row pt-5 mx-auto">

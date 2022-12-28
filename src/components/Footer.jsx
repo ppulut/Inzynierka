@@ -137,7 +137,7 @@ const Footer = () => {
           <Phone style={{marginRight:"10px"}}/> +69 2137 420
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> kontakt@kontakt.pl
+          <MailOutline style={{marginRight:"10px"}} /> nailstest1233@gmail.com
         </ContactItem>
        </Prawo>
     </Container>

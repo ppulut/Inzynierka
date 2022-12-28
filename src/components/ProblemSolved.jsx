@@ -70,6 +70,7 @@ const ProblemSolved = ({item}) => {
         {/* 15 */}
         <PanelContentInner ref={ref}>
         {item.opis}
+        {item.opis2}
         </PanelContentInner>
       </PanelContent>
     </Panel>

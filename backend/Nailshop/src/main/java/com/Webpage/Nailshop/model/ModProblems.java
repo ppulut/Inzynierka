@@ -20,6 +20,9 @@ public class ModProblems {
     @Column(name = "Opis")
     private String opis;
 
+    @Column(name = "Opis2")
+    private String opis2;
+
 
 
 }

@@ -358,7 +358,8 @@ public class NailshopApplication implements CommandLineRunner {
 
 		ModProblems problems1 = new ModProblems();
 		problems1.setTitle("Sucha skóra");
-		problems1.setOpis("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s");
+		problems1.setOpis("Do najbardziej skutecznych składników nawilżających należą kwas hialuronowy, mocznik, ceramidy, gliceryna, witamina E. Można przedobrzyć z nawilżaniem skóry – objawem jest pojawienie się drobnych krostek wokół ust. ");
+		problems1.setOpis2("Najczęstszą przyczyną występowania uporczywej suchości skóry jest atopowe zapalenie skóry. Jest to zapalne schorzenie skóry, a choroba ma podłoże genetyczne. Problem moży być też związany z zaburzeniem funkcjonowania komórek układu immunologicznego.");
 		problemsRepository.save(problems1);
 
 		ModProblems problems2 = new ModProblems();
@@ -424,7 +425,7 @@ public class NailshopApplication implements CommandLineRunner {
 		blackList1.setName("Krystyna");
 		blackList1.setSurname("Janko");
 		blackList1.setEmail("krychapaw@onet.pl");
-		blackList1.setPhone("547854365");
+		blackList1.setPhone("247854365");
 		blackList1.setCardNumber("666");
 		blackListRepository.save(blackList1);
 
